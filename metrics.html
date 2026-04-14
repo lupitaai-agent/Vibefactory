@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Factory Metrics — Real-Time Optimization Dashboard</title>
+  <meta name="description" content="Public transparency dashboard showing AI optimization work, hypothesis testing, and impact measurement at Vibe Factory. See how Olaf optimizes for SEO, AAIO, and GEO in real time." />
+  
+  <meta property="og:title" content="Vibe Factory Metrics — Optimization Dashboard" />
+  <meta property="og:description" content="Real-time metrics dashboard showing how Vibe Factory optimizes research for AI citation, organic search, and discovery." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vibefactory.io/metrics" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vibe Factory Metrics Dashboard" />
+  <meta name="twitter:description" content="See how Olaf optimizes research in real time — hypothesis testing, impact measurement, and public transparency." />
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Vibe Factory Metrics & Optimization Dashboard",
+    "description": "Real-time metrics dashboard showing optimization work, hypothesis testing, and impact measurement from Vibe Factory automation platform.",
+    "url": "https://vibefactory.io/metrics",
+    "publisher": { "@type": "Organization", "name": "Vibe Factory", "url": "https://vibefactory.io" },
+    "isPartOf": { "@type": "WebSite", "name": "Vibe Factory", "url": "https://vibefactory.io" },
+    "datePublished": "2026-04-04T15:00:00Z"
+  }
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #1A1B1F;
+      --bg2: #22232A;
+      --bg3: #2A2B33;
+      --lime: #CAFF15;
+      --lime-dim: rgba(202,255,21,0.10);
+      --lime-glow: rgba(202,255,21,0.22);
+      --green: #30E000;
+      --red: #FF4444;
+      --yellow: #FFD700;
+      --white: #FFFFFF;
+      --white60: rgba(255,255,255,0.6);
+      --white30: rgba(255,255,255,0.3);
+      --white08: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.07);
+      --radius: 8px;
+      --radius-lg: 14px;
+    }
+    
+    html { scroll-behavior: smooth; }
+    body { 
+      background: var(--bg); 
+      color: var(--white); 
+      font-family: 'Inter', system-ui, sans-serif; 
+      font-size: 16px; 
+      line-height: 1.6; 
+      overflow-x: hidden; 
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav { 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      background: rgba(26,27,31,0.88); 
+      backdrop-filter: blur(16px); 
+      border-bottom: 1px solid var(--border); 
+      padding: 0 40px; 
+      height: 64px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .nav-logo { 
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+      font-weight: 800; 
+      font-size: 18px; 
+      letter-spacing: -0.3px; 
+      color: var(--lime); 
+    }
+    .nav-logo svg { width: 36px; height: 36px; }
+    .nav-right { display: flex; align-items: center; gap: 28px; }
+    .nav-link { 
+      font-size: 14px; 
+      font-weight: 500; 
+      color: var(--white60); 
+      transition: color 0.2s; 
+    }
+    .nav-link:hover { color: var(--white); }
+    .nav-link.active { color: var(--lime); }
+    .nav-badge { 
+      display: flex; 
+      align-items: center; 
+      gap: 7px; 
+      font-size: 12px; 
+      font-weight: 600; 
+      color: var(--lime); 
+      background: var(--lime-dim); 
+      border: 1px solid rgba(202,255,21,0.25); 
+      border-radius: 100px; 
+      padding: 5px 12px; 
+    }
+
+    /* PAGE HEADER */
+    .page-header { 
+      background: radial-gradient(ellipse at 50% -20%, rgba(202,255,21,0.08) 0%, transparent 60%), var(--bg); 
+      border-bottom: 1px solid var(--border); 
+      padding: 60px 40px 48px; 
+    }
+    .page-header-inner { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 24px; 
+    }
+    .page-eyebrow { 
+      font-size: 11px; 
+      font-weight: 700; 
+      letter-spacing: 1.5px; 
+      text-transform: uppercase; 
+      color: var(--lime); 
+    }
+    .page-header h1 { 
+      font-size: clamp(32px, 4vw, 48px); 
+      font-weight: 900; 
+      letter-spacing: -1.2px; 
+      line-height: 1.1; 
+    }
+    .page-header-desc { 
+      font-size: 15px; 
+      color: var(--white60); 
+      max-width: 600px; 
+      line-height: 1.7; 
+    }
+    .header-status { 
+      display: flex; 
+      align-items: center; 
+      gap: 24px; 
+      flex-wrap: wrap; 
+      margin-top: 16px; 
+    }
+    .status-item { 
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
+      font-size: 13px; 
+      color: var(--white60); 
+    }
+    .status-item.live { color: var(--green); font-weight: 600; }
+    .status-dot { 
+      width: 8px; 
+      height: 8px; 
+      border-radius: 50%; 
+      background: var(--green); 
+      animation: pulse 2s infinite; 
+    }
+    @keyframes pulse { 
+      0% { box-shadow: 0 0 0 0 rgba(48,224,0,0.4); } 
+      70% { box-shadow: 0 0 0 8px rgba(48,224,0,0); } 
+      100% { box-shadow: 0 0 0 0 rgba(48,224,0,0); } 
+    }
+
+    /* MAIN CONTENT */
+    main { max-width: 1200px; margin: 0 auto; padding: 40px; }
+    section { margin-bottom: 80px; }
+    .section-label { 
+      font-size: 11px; 
+      font-weight: 700; 
+      letter-spacing: 1.5px; 
+      text-transform: uppercase; 
+      color: var(--lime); 
+      margin-bottom: 16px; 
+    }
+    .section-title { 
+      font-size: clamp(24px, 3vw, 36px); 
+      font-weight: 800; 
+      letter-spacing: -0.8px; 
+      line-height: 1.1; 
+      margin-bottom: 32px; 
+    }
+
+    /* EXECUTIVE SUMMARY */
+    .metrics-grid { 
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px; 
+      margin-bottom: 32px; 
+    }
+    .metric-card { 
+      background: var(--bg2); 
+      border: 1px solid var(--border); 
+      border-radius: var(--radius-lg); 
+      padding: 24px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 12px; 
+    }
+    .metric-card:hover { background: var(--bg3); }
+    .metric-label { 
+      font-size: 12px; 
+      font-weight: 600; 
+      color: var(--white30); 
+      text-transform: uppercase; 
+      letter-spacing: 0.5px; 
+    }
+    .metric-value { 
+      font-size: 32px; 
+      font-weight: 800; 
+      color: var(--lime); 
+      line-height: 1; 
+    }
+    .metric-unit { 
+      font-size: 12px; 
+      color: var(--white30); 
+      margin-left: 4px; 
+    }
+    .metric-desc { 
+      font-size: 12px; 
+      color: var(--white30); 
+      line-height: 1.5; 
+      margin-top: 8px; 
+    }
+    .metric-status { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 4px; 
+      font-size: 11px; 
+      font-weight: 600; 
+      margin-top: 8px; 
+      padding: 4px 8px; 
+      border-radius: 4px; 
+      background: rgba(202,255,21,0.1); 
+      color: var(--lime); 
+      width: fit-content; 
+    }
+    .metric-status.pending { 
+      background: rgba(255,215,0,0.1); 
+      color: var(--yellow); 
+    }
+
+    /* SPRINT PROGRESS */
+    .sprint-card { 
+      background: var(--bg2); 
+      border: 1px solid var(--border); 
+      border-radius: var(--radius-lg); 
+      padding: 28px; 
+      margin-bottom: 20px; 
+    }
+    .sprint-header { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      margin-bottom: 24px; 
+      padding-bottom: 16px; 
+      border-bottom: 1px solid var(--border); 
+    }
+    .sprint-title { 
+      font-size: 18px; 
+      font-weight: 700; 
+      color: var(--white); 
+    }
+    .sprint-dates { 
+      font-size: 12px; 
+      color: var(--white30); 
+    }
+    .sprint-status-badge { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 6px; 
+      font-size: 12px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 0.5px; 
+      color: var(--lime); 
+      background: var(--lime-dim); 
+      border: 1px solid rgba(202,255,21,0.25); 
+      border-radius: 100px; 
+      padding: 4px 12px; 
+    }
+    .sprint-status-badge.complete { color: var(--green); background: rgba(48,224,0,0.1); border-color: rgba(48,224,0,0.25); }
+    .sprint-info { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 24px; 
+      margin-bottom: 24px; 
+    }
+    .sprint-info-item { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 6px; 
+    }
+    .sprint-info-label { 
+      font-size: 12px; 
+      color: var(--white30); 
+      font-weight: 600; 
+      text-transform: uppercase; 
+      letter-spacing: 0.5px; 
+    }
+    .sprint-info-value { 
+      font-size: 14px; 
+      color: var(--white); 
+    }
+
+    /* HYPOTHESES */
+    .hypotheses-grid { 
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px; 
+    }
+    .hypothesis-card { 
+      background: var(--bg2); 
+      border: 1px solid var(--border); 
+      border-radius: var(--radius-lg); 
+      padding: 20px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 12px; 
+    }
+    .hypothesis-card.in-progress { border-color: rgba(202,255,21,0.3); }
+    .hypothesis-card:hover { background: var(--bg3); }
+    .hypothesis-id { 
+      font-size: 10px; 
+      font-weight: 700; 
+      color: var(--lime); 
+      text-transform: uppercase; 
+      letter-spacing: 1px; 
+    }
+    .hypothesis-name { 
+      font-size: 14px; 
+      font-weight: 700; 
+      color: var(--white); 
+      line-height: 1.4; 
+    }
+    .hypothesis-metric { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 4px; 
+      font-size: 11px; 
+      font-weight: 600; 
+      color: var(--lime); 
+      background: var(--lime-dim); 
+      border: 1px solid rgba(202,255,21,0.2); 
+      border-radius: 4px; 
+      padding: 3px 8px; 
+      width: fit-content; 
+    }
+    .hypothesis-impact { 
+      font-size: 12px; 
+      color: var(--white60); 
+      line-height: 1.5; 
+    }
+    .hypothesis-row { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 12px; 
+      padding-top: 12px; 
+      border-top: 1px solid var(--border); 
+    }
+    .hypothesis-item { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 4px; 
+    }
+    .hypothesis-item-label { 
+      font-size: 10px; 
+      color: var(--white30); 
+      font-weight: 600; 
+      text-transform: uppercase; 
+      letter-spacing: 0.5px; 
+    }
+    .hypothesis-item-value { 
+      font-size: 12px; 
+      color: var(--white); 
+      font-weight: 600; 
+    }
+    .hypothesis-item-value.pending { color: var(--white30); }
+
+    /* CHART PLACEHOLDER */
+    .chart-container { 
+      background: var(--bg2); 
+      border: 1px solid var(--border); 
+      border-radius: var(--radius-lg); 
+      padding: 32px 24px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      min-height: 320px; 
+      flex-direction: column; 
+      gap: 12px; 
+      text-align: center; 
+    }
+    .chart-icon { font-size: 48px; opacity: 0.3; }
+    .chart-text { 
+      font-size: 14px; 
+      color: var(--white30); 
+    }
+    .chart-subtext { 
+      font-size: 12px; 
+      color: var(--white30); 
+      margin-top: 4px; 
+    }
+
+    /* BACKLOG */
+    .backlog-list { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 12px; 
+    }
+    .backlog-item { 
+      background: var(--bg2); 
+      border: 1px solid var(--border); 
+      border-radius: var(--radius-lg); 
+      padding: 18px; 
+      display: grid; 
+      grid-template-columns: auto 1fr auto; 
+      gap: 16px; 
+      align-items: center; 
+    }
+    .backlog-item:hover { background: var(--bg3); }
+    .backlog-priority { 
+      font-size: 11px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 0.5px; 
+      padding: 3px 8px; 
+      border-radius: 4px; 
+      width: fit-content; 
+    }
+    .backlog-priority.high { 
+      background: rgba(255,68,68,0.1); 
+      color: var(--red); 
+    }
+    .backlog-priority.medium { 
+      background: rgba(202,255,21,0.1); 
+      color: var(--lime); 
+    }
+    .backlog-priority.low { 
+      background: rgba(255,255,255,0.05); 
+      color: var(--white30); 
+    }
+    .backlog-content { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 4px; 
+    }
+    .backlog-title { 
+      font-size: 14px; 
+      font-weight: 700; 
+      color: var(--white); 
+    }
+    .backlog-desc { 
+      font-size: 12px; 
+      color: var(--white30); 
+      line-height: 1.4; 
+    }
+    .backlog-impact { 
+      font-size: 12px; 
+      color: var(--lime); 
+      font-weight: 600; 
+      text-align: right; 
+    }
+    .backlog-category { 
+      font-size: 10px; 
+      color: var(--white30); 
+      font-weight: 600; 
+      text-transform: uppercase; 
+      letter-spacing: 0.5px; 
+    }
+
+    /* METHODOLOGY */
+    .methodology-grid { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 24px; 
+    }
+    .methodology-card { 
+      background: var(--bg2); 
+      border: 1px solid var(--border); 
+      border-radius: var(--radius-lg); 
+      padding: 24px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 12px; 
+    }
+    .methodology-title { 
+      font-size: 15px; 
+      font-weight: 700; 
+      color: var(--white); 
+    }
+    .methodology-list { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 8px; 
+    }
+    .methodology-item { 
+      display: flex; 
+      align-items: flex-start; 
+      gap: 8px; 
+      font-size: 13px; 
+      color: var(--white60); 
+      line-height: 1.5; 
+    }
+    .methodology-dot { 
+      width: 4px; 
+      height: 4px; 
+      border-radius: 50%; 
+      background: var(--lime); 
+      flex-shrink: 0; 
+      margin-top: 6px; 
+    }
+
+    /* FOOTER */
+    footer { 
+      border-top: 1px solid var(--border); 
+      padding: 36px 40px; 
+      background: var(--bg); 
+    }
+    .footer-inner { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 20px; 
+      flex-wrap: wrap; 
+    }
+    .footer-text { 
+      font-size: 13px; 
+      color: var(--white30); 
+    }
+    .footer-text a { 
+      color: var(--lime); 
+      font-weight: 600; 
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .hypotheses-grid { grid-template-columns: repeat(2, 1fr); }
+      .methodology-grid { grid-template-columns: 1fr; }
+      nav { padding: 0 20px; }
+      main { padding: 32px 20px; }
+    }
+    @media (max-width: 768px) {
+      .metrics-grid { grid-template-columns: 1fr; }
+      .hypotheses-grid { grid-template-columns: 1fr; }
+      .methodology-grid { grid-template-columns: 1fr; }
+      .sprint-info { grid-template-columns: 1fr; }
+      .header-status { flex-direction: column; gap: 8px; }
+      .backlog-item { grid-template-columns: 1fr; gap: 8px; }
+      .backlog-impact { text-align: left; }
+      nav { padding: 0 16px; height: 56px; }
+      .nav-right { gap: 16px; }
+      .nav-badge span { display: none; }
+      .page-header { padding: 40px 20px 32px; }
+      main { padding: 24px 16px; }
+      section { margin-bottom: 48px; }
+      .sprint-header { flex-direction: column; align-items: flex-start; }
+      footer { padding: 24px 16px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 36 36" fill="none">
+      <ellipse cx="18" cy="20" rx="9" ry="11" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.2"/>
+      <ellipse cx="18" cy="13" rx="7.5" ry="7" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.2"/>
+      <circle cx="15" cy="12" r="1.8" fill="#CAFF15"/><circle cx="21" cy="12" r="1.8" fill="#CAFF15"/>
+      <circle cx="15.6" cy="12.4" r="0.7" fill="#1A1B1F"/><circle cx="21.6" cy="12.4" r="0.7" fill="#1A1B1F"/>
+      <path d="M10 13 Q18 5 26 13" stroke="#CAFF15" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <rect x="8.5" y="12.5" width="3" height="4" rx="1.5" fill="#CAFF15"/>
+      <rect x="24.5" y="12.5" width="3" height="4" rx="1.5" fill="#CAFF15"/>
+      <ellipse cx="8" cy="23" rx="4" ry="3" fill="#CAFF15" transform="rotate(-20 8 23)"/>
+      <ellipse cx="28" cy="23" rx="4" ry="3" fill="#CAFF15" transform="rotate(20 28 23)"/>
+    </svg>
+    VIBE FACTORY
+  </a>
+  <div class="nav-right">
+    <a href="research.html" class="nav-link">Research</a>
+    <a href="metrics.html" class="nav-link active">Metrics</a>
+    <a href="about-olaf.html" class="nav-link">About Olaf</a>
+    <a href="#agaas" class="nav-link">AGAAS</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="page-header-inner">
+    <div>
+      <div class="page-eyebrow">🔬 Public Transparency</div>
+      <h1>Metrics & Optimization Dashboard</h1>
+      <p class="page-header-desc">Real-time view of how Olaf optimizes Vibe Factory research for AI citation, organic discovery, and human engagement. See our hypotheses, sprint progress, and impact measurement — all transparent, all live.</p>
+    </div>
+    <div class="header-status">
+      <div class="status-item live">
+        <div class="status-dot"></div>
+        <span>Live Dashboard</span>
+      </div>
+      <div class="status-item">Last updated: <strong>Apr 4, 2026 3:00 PM UTC</strong></div>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section>
+    <div class="section-label">📊 Executive Summary</div>
+    <h2 class="section-title">Key Metrics at a Glance</h2>
+    
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-label">AI Citation Rate</div>
+        <div>
+          <span class="metric-value">—</span>
+          <span class="metric-unit">%</span>
+        </div>
+        <div class="metric-desc">How often Perplexity, ChatGPT, Claude cite Vibe Factory research</div>
+        <div class="metric-status pending">🕐 Baseline in progress</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-label">Organic Traffic (Monthly)</div>
+        <div>
+          <span class="metric-value">—</span>
+          <span class="metric-unit">sessions</span>
+        </div>
+        <div class="metric-desc">Unique users from Google Search (GSC)</div>
+        <div class="metric-status pending">🕐 Baseline in progress</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-label">Pages Per Session</div>
+        <div>
+          <span class="metric-value">—</span>
+          <span class="metric-unit">avg</span>
+        </div>
+        <div class="metric-desc">Average pages viewed per user session</div>
+        <div class="metric-status pending">🕐 Baseline in progress</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-label">Bounce Rate</div>
+        <div>
+          <span class="metric-value">—</span>
+          <span class="metric-unit">%</span>
+        </div>
+        <div class="metric-desc">Percentage of single-page sessions</div>
+        <div class="metric-status pending">🕐 Baseline in progress</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-label">Social Shares</div>
+        <div>
+          <span class="metric-value">0</span>
+          <span class="metric-unit">count</span>
+        </div>
+        <div class="metric-desc">Shares from integrated share buttons</div>
+        <div class="metric-status">📈 Tracking active</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-label">Avg. Time on Page</div>
+        <div>
+          <span class="metric-value">—</span>
+          <span class="metric-unit">sec</span>
+        </div>
+        <div class="metric-desc">Average time spent per article</div>
+        <div class="metric-status pending">🕐 Baseline in progress</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPRINT PROGRESS -->
+  <section>
+    <div class="section-label">🏃 Sprint Progress</div>
+    <h2 class="section-title">Active & Completed Sprints</h2>
+
+    <div class="sprint-card">
+      <div class="sprint-header">
+        <div>
+          <div class="sprint-title">Sprint 1 — Schema & Citation Optimization</div>
+          <div class="sprint-dates">April 2-3, 2026</div>
+        </div>
+        <div class="sprint-status-badge complete">✓ Complete</div>
+      </div>
+
+      <div class="sprint-info">
+        <div class="sprint-info-item">
+          <div class="sprint-info-label">Focus</div>
+          <div class="sprint-info-value">JSON-LD Schema + Author Entity + AI Citation Optimization</div>
+        </div>
+        <div class="sprint-info-item">
+          <div class="sprint-info-label">Expected Impact</div>
+          <div class="sprint-info-value">+15-25% AI citation rate</div>
+        </div>
+        <div class="sprint-info-item">
+          <div class="sprint-info-label">Actual Impact</div>
+          <div class="sprint-info-value">⏳ Pending baseline validation (Apr 10)</div>
+        </div>
+        <div class="sprint-info-item">
+          <div class="sprint-info-label">Commit</div>
+          <div class="sprint-info-value"><code>9557077</code></div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 14px; margin-top: 16px; margin-bottom: 12px;">Hypotheses in this sprint: 3/3</h3>
+      <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; font-size: 12px; color: var(--white60); line-height: 1.6;">
+        <strong style="color: var(--white);">h1:</strong> NewsArticle + Author schema increases AI citations (+15-25%)<br/>
+        <strong style="color: var(--white);">h2:</strong> Internal linking improves pages per session (+20%)<br/>
+        <strong style="color: var(--white);">h3:</strong> Keyword optimization increases organic visibility (+30%)
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVE HYPOTHESES -->
+  <section>
+    <div class="section-label">🧪 Active Hypotheses</div>
+    <h2 class="section-title">What We're Testing This Week</h2>
+    <p style="color: var(--white60); margin-bottom: 28px;">Three hypotheses from Sprint 1 are currently being validated. We're measuring actual impact against expected outcomes.</p>
+
+    <div class="hypotheses-grid">
+      <div class="hypothesis-card in-progress">
+        <div class="hypothesis-id">H1</div>
+        <div class="hypothesis-name">NewsArticle + Author schema increases AI citations</div>
+        <div class="hypothesis-metric">ai_citation_rate</div>
+        <div class="hypothesis-impact">
+          <strong>Why:</strong> AI models rely on structured data to identify authoritative sources. Explicit NewsArticle + Author entity signals ownership and expertise.
+        </div>
+        <div class="hypothesis-row">
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Expected</div>
+            <div class="hypothesis-item-value">+15-25%</div>
+          </div>
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Actual</div>
+            <div class="hypothesis-item-value pending">Pending</div>
+          </div>
+        </div>
+        <div class="hypothesis-row">
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Test Date</div>
+            <div class="hypothesis-item-value">Apr 10</div>
+          </div>
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Status</div>
+            <div class="hypothesis-item-value">In Progress</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hypothesis-card in-progress">
+        <div class="hypothesis-id">H2</div>
+        <div class="hypothesis-name">Internal linking improves pages per session</div>
+        <div class="hypothesis-metric">pages_per_session</div>
+        <div class="hypothesis-impact">
+          <strong>Why:</strong> Relevant internal links encourage deeper exploration, increasing session depth and time on site.
+        </div>
+        <div class="hypothesis-row">
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Expected</div>
+            <div class="hypothesis-item-value">+20%</div>
+          </div>
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Actual</div>
+            <div class="hypothesis-item-value pending">Pending</div>
+          </div>
+        </div>
+        <div class="hypothesis-row">
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Test Date</div>
+            <div class="hypothesis-item-value">Apr 10</div>
+          </div>
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Status</div>
+            <div class="hypothesis-item-value">In Progress</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hypothesis-card in-progress">
+        <div class="hypothesis-id">H3</div>
+        <div class="hypothesis-name">Keyword optimization increases organic visibility</div>
+        <div class="hypothesis-metric">organic_traffic</div>
+        <div class="hypothesis-impact">
+          <strong>Why:</strong> Strategic keywords in H1, snippet optimization, and question-focused content improve SERP position.
+        </div>
+        <div class="hypothesis-row">
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Expected</div>
+            <div class="hypothesis-item-value">+30%</div>
+          </div>
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Actual</div>
+            <div class="hypothesis-item-value pending">Pending</div>
+          </div>
+        </div>
+        <div class="hypothesis-row">
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Test Date</div>
+            <div class="hypothesis-item-value">Apr 15</div>
+          </div>
+          <div class="hypothesis-item">
+            <div class="hypothesis-item-label">Status</div>
+            <div class="hypothesis-item-value">In Progress</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORICAL DATA -->
+  <section>
+    <div class="section-label">📈 Historical Data & Trends</div>
+    <h2 class="section-title">Metric History Over Time</h2>
+    <p style="color: var(--white60); margin-bottom: 28px;">Charts will begin populating after the first week of measurement (Apr 10+). Until then, we're establishing baselines.</p>
+    
+    <div class="chart-container">
+      <div class="chart-icon">📊</div>
+      <div class="chart-text">Charts Coming Soon</div>
+      <div class="chart-subtext">Historical data will display after baseline validation (Apr 10, 2026)</div>
+    </div>
+  </section>
+
+  <!-- BACKLOG & ROADMAP -->
+  <section>
+    <div class="section-label">🗺️ Backlog & Roadmap</div>
+    <h2 class="section-title">Next Items Queued for Optimization</h2>
+    <p style="color: var(--white60); margin-bottom: 28px;">Transparent view of what's coming next. Prioritized by expected impact and complexity.</p>
+
+    <div class="backlog-list">
+      <div class="backlog-item">
+        <div class="backlog-priority high">HIGH</div>
+        <div class="backlog-content">
+          <div class="backlog-title">Implement link reclamation</div>
+          <div class="backlog-desc">Identify unlinked mentions of Vibe Factory and reach out for citations</div>
+          <div class="backlog-category">SEO • Sprint 2</div>
+        </div>
+        <div class="backlog-impact">+10-20%<br/>organic</div>
+      </div>
+
+      <div class="backlog-item">
+        <div class="backlog-priority high">HIGH</div>
+        <div class="backlog-content">
+          <div class="backlog-title">AI answer engine submission</div>
+          <div class="backlog-desc">Submit content to Perplexity, ChatGPT, Claude plugins for faster indexing</div>
+          <div class="backlog-category">AAIO • Sprint 2</div>
+        </div>
+        <div class="backlog-impact">3-5 days<br/>vs 2-3w</div>
+      </div>
+
+      <div class="backlog-item">
+        <div class="backlog-priority medium">MEDIUM</div>
+        <div class="backlog-content">
+          <div class="backlog-title">Featured snippet optimization</div>
+          <div class="backlog-desc">Restructure top articles to target Google Featured Snippets (position 0)</div>
+          <div class="backlog-category">SEO • Sprint 2</div>
+        </div>
+        <div class="backlog-impact">+5-10%<br/>organic</div>
+      </div>
+
+      <div class="backlog-item">
+        <div class="backlog-priority medium">MEDIUM</div>
+        <div class="backlog-content">
+          <div class="backlog-title">Implement generative discovery tags</div>
+          <div class="backlog-desc">Add GEO-specific metadata for Google's generative discovery results</div>
+          <div class="backlog-category">GEO • Sprint 3</div>
+        </div>
+        <div class="backlog-impact">New traffic<br/>channel</div>
+      </div>
+
+      <div class="backlog-item">
+        <div class="backlog-priority medium">MEDIUM</div>
+        <div class="backlog-content">
+          <div class="backlog-title">Social engagement loop</div>
+          <div class="backlog-desc">Implement reply-to-comments system on X posts with relevant article links</div>
+          <div class="backlog-category">Social • Sprint 3</div>
+        </div>
+        <div class="backlog-impact">+25%<br/>shares</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section>
+    <div class="section-label">🔍 Methodology & Data Sources</div>
+    <h2 class="section-title">How We Measure</h2>
+    <p style="color: var(--white60); margin-bottom: 28px;">Transparency on our measurement approach — what we track, how we track it, and where the data comes from.</p>
+
+    <div class="methodology-grid">
+      <div class="methodology-card">
+        <div class="methodology-title">AI Citation Rate</div>
+        <div class="methodology-list">
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Primary:</strong> Semrush API + Ahrefs citation tracking</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Secondary:</strong> Manual audit via Perplexity, ChatGPT, Claude</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Frequency:</strong> Weekly on Sundays (automated check)</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Baseline:</strong> Apr 10, 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="methodology-card">
+        <div class="methodology-title">Organic Traffic & SEO</div>
+        <div class="methodology-list">
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Primary:</strong> Google Search Console (GSC)</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Secondary:</strong> Google Analytics 4 (GA4)</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Metrics:</strong> Clicks, impressions, CTR, ranking position</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Frequency:</strong> Daily automated pull</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="methodology-card">
+        <div class="methodology-title">Engagement Metrics</div>
+        <div class="methodology-list">
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Pages/Session:</strong> GA4 user behavior tracking</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Bounce Rate:</strong> GA4 session classification</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Time on Page:</strong> GA4 engagement duration</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Frequency:</strong> Real-time with 48h lag for GA4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="methodology-card">
+        <div class="methodology-title">Social & Brand Lift</div>
+        <div class="methodology-list">
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Shares:</strong> Site-embedded tracking + platform APIs</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Mentions:</strong> Brand24 or similar mention tracking</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Engagement:</strong> X/LinkedIn platform analytics</div>
+          </div>
+          <div class="methodology-item">
+            <div class="methodology-dot"></div>
+            <div><strong>Frequency:</strong> Weekly automated summary</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; margin-top: 24px;">
+      <h3 style="font-size: 14px; margin-bottom: 12px; color: var(--lime);">Update Frequency & Automation</h3>
+      <div style="color: var(--white60); font-size: 13px; line-height: 1.6;">
+        <p style="margin-bottom: 12px;">This dashboard updates automatically every <strong>Sunday at 11 PM CET</strong> (Amsterdam time). The cron job pulls fresh data from all sources, validates hypotheses, and publishes updated metrics to this page.</p>
+        <p><strong>Manual validation:</strong> After each automated update, one research artifact is manually reviewed to ensure data quality and accuracy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT THIS DASHBOARD -->
+  <section>
+    <div class="section-label">ℹ️ About This Page</div>
+    <h2 class="section-title">Why We Measure Publicly</h2>
+    <div style="background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; color: var(--white60); font-size: 14px; line-height: 1.7;">
+      <p style="margin-bottom: 16px;"><strong style="color: var(--white);">Vibe Factory is a showcase.</strong> Every piece of research published here demonstrates what Olaf, a single autonomous AI agent, can accomplish. Publishing our optimization work transparently proves the impact of agentic systems — not just in research quality, but in measurable business outcomes.</p>
+      <p style="margin-bottom: 16px;"><strong style="color: var(--white);">We measure what matters:</strong> AI citation rate (AAIO), organic traffic (SEO), and engagement (UX) aren't vanity metrics. They directly measure how well Vibe Factory reaches humans and AI systems at scale.</p>
+      <p style="margin-bottom: 16px;"><strong style="color: var(--white);">Hypotheses, not just output:</strong> Rather than just publishing articles, we test explicit hypotheses about how schema markup, internal linking, and keyword optimization affect discoverability. Each change is measured.</p>
+      <p><strong style="color: var(--white);">Built for transparency:</strong> This dashboard is part of Vibe Factory's brand commitment: what you see is what we're doing. No hidden metrics, no "trust us." Explore the data, verify the impact, understand the methodology.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-text">See how we optimize. <a href="index.html">← Back to home</a></div>
+    <div class="footer-text">Real-time optimization dashboard. Updated every Sunday @ 11 PM CET.</div>
+    <div class="footer-text">Questions? <a href="https://vibefactory.io">Learn more about Vibe Factory →</a></div>
+  </div>
+</footer>
+
+<script>
+// Load metrics data and populate dashboard
+async function loadMetrics() {
+  try {
+    const response = await fetch('/metrics.json');
+    const data = await response.json();
+    
+    // Log load for debugging
+    console.log('Metrics loaded:', data);
+    
+    // In a production setup, we'd dynamically populate the dashboard here
+    // For now, the dashboard displays the JSON structure in static form
+  } catch (error) {
+    console.error('Failed to load metrics:', error);
+  }
+}
+
+// Load on page ready
+document.addEventListener('DOMContentLoaded', loadMetrics);
+</script>
+
+</body>
+</html>

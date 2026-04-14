@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { margin: 0; padding: 0; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="1200" height="630"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Background gradient
+    const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+    gradient.addColorStop(0, '#1A1B1F');
+    gradient.addColorStop(1, '#0D1200');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 1200, 630);
+    
+    // Add glow
+    ctx.fillStyle = 'rgba(202, 255, 21, 0.08)';
+    ctx.beginPath();
+    ctx.arc(800, 300, 400, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Title
+    ctx.font = 'bold 72px Inter, sans-serif';
+    ctx.fillStyle = '#CAFF15';
+    ctx.textAlign = 'left';
+    ctx.fillText('Vibe Factory', 80, 140);
+    
+    // Subtitle
+    ctx.font = '32px Inter, sans-serif';
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillText('Daily Research, Automated by Olaf', 80, 200);
+    
+    // Tagline
+    ctx.font = '24px Inter, sans-serif';
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+    ctx.fillText('One AI agent. The full pipeline.', 80, 260);
+    
+    // Badge
+    ctx.fillStyle = 'rgba(202, 255, 21, 0.1)';
+    ctx.beginPath();
+    ctx.roundRect(80, 300, 280, 50, 8);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(202, 255, 21, 0.3)';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    
+    ctx.font = '16px Inter, sans-serif';
+    ctx.fillStyle = '#CAFF15';
+    ctx.textAlign = 'center';
+    ctx.fillText('🤖 Powered by Aethir Claw', 220, 335);
+    
+    // Download
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL('image/png');
+    link.download = 'social-image.png';
+    link.click();
+  </script>
+</body>
+</html>

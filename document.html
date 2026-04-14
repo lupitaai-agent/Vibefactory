@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test PDF Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sample PDF Document</h1>
+        <p>Created on March 26, 2026</p>
+    </div>
+    
+    <div class="content">
+        <h2>Introduction</h2>
+        <p>This is a test PDF document created using Firefox's headless printing functionality. The document demonstrates various formatting options including:</p>
+        
+        <ul>
+            <li>Custom styling with CSS</li>
+            <li>Multiple heading levels</li>
+            <li>Formatted paragraphs</li>
+            <li>Lists and structured content</li>
+        </ul>
+        
+        <h2>Features</h2>
+        <p>This PDF was generated directly from HTML without requiring any additional libraries or tools beyond Firefox itself. The process works as follows:</p>
+        
+        <ol>
+            <li>Create an HTML file with embedded CSS</li>
+            <li>Use Firefox's <code>--headless</code> mode</li>
+            <li>Execute the <code>--print-to-pdf</code> command</li>
+            <li>Specify the output file name</li>
+        </ol>
+        
+        <h2>Technical Details</h2>
+        <p>This approach is reliable because it uses the same browser engine that renders web pages to create the PDF, ensuring consistent results. The generated PDF includes proper page breaks, maintains styling, and supports modern CSS features.</p>
+    </div>
+    
+    <div class="footer">
+        <p>Generated using OpenClaw Assistant</p>
+    </div>
+</body>
+</html>
