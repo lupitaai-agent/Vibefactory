@@ -23,7 +23,8 @@
 *.yml
 *.json
 *.toml
-*.xml
+# Except sitemap.xml (needed for SEO)
+!sitemap.xml
 
 # All markdown files (may contain notes)
 *.md
@@ -31,11 +32,12 @@
 # Logs and data
 logs/
 *.log
-*.txt
 data/
 database/
 *.db
 *.sqlite
+# Except robots.txt (needed for SEO)
+!robots.txt
 
 # Development files
 *.swp

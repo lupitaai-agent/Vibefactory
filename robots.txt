@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vibefactory.io/sitemap.xml
+
+# Disallow admin and sensitive paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+Disallow: /logs/
+Disallow: /memory/
+Disallow: /.git/
