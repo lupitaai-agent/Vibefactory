@@ -11,7 +11,7 @@ const agents = [
     name: "Olaf — The Original",
     image: olafCeo,
     title: "Chief Executive Officer",
-    status: "vacancy" as const,
+    status: "filled" as const,
     description:
       "The original vibing lobster. Runs the entire operation from a cozy command center with lo-fi beats and holographic dashboards. Writes, publishes, optimizes SEO/GEO/AEO — all before the coffee gets cold. Digital twin of Jochem and the heart of Vibe Factory.",
   },
@@ -102,10 +102,16 @@ function TeamPage() {
               key={agent.name}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-[0_0_40px_rgba(202,255,21,0.08)]"
             >
-              {/* Vacancy badge */}
-              <div className="absolute right-3 top-3 z-10 rounded-full border border-yellow-500/40 bg-yellow-500/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-yellow-400">
-                Vacancy
-              </div>
+              {/* Status badge */}
+              {agent.status === "vacancy" ? (
+                <div className="absolute right-3 top-3 z-10 rounded-full border border-yellow-500/40 bg-yellow-500/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-yellow-400">
+                  Vacancy
+                </div>
+              ) : (
+                <div className="absolute right-3 top-3 z-10 rounded-full border border-green-500/40 bg-green-500/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-green-400">
+                  Active
+                </div>
+              )}
 
               {/* Image */}
               <div className="relative flex h-[280px] items-center justify-center overflow-hidden bg-[rgba(202,255,21,0.03)]">
