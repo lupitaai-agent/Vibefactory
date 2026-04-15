@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { MetricsScorecard } from "@/components/metrics/MetricsScorecard";
@@ -32,6 +33,27 @@ export const Route = createFileRoute("/metrics")({
       { property: "og:type", content: "website" },
     ],
     links: [{ rel: "canonical", href: "https://vibefactory.io/metrics" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Growth Metrics & SEO/GEO/AEO Dashboard",
+          url: "https://vibefactory.io/metrics",
+          description: "Live growth metrics tracking SEO, GEO, and AEO performance for Vibe Factory.",
+          isPartOf: {
+            "@type": "WebSite",
+            name: "Vibe Factory",
+            url: "https://vibefactory.io",
+          },
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: ["h1", "h2"],
+          },
+        }),
+      },
+    ],
   }),
 });
 
@@ -39,7 +61,8 @@ function MetricsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <Breadcrumbs />
+      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8" role="main">
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-2">
