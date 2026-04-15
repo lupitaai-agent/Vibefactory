@@ -1,5 +1,5 @@
-import { HeroMascot } from "./HeroMascot";
 import { ClawLogo } from "./ClawLogo";
+import olafOriginal from "@/assets/olaf-hero-1-ceo.png";
 
 export function HeroSection() {
   return (
@@ -52,7 +52,11 @@ export function HeroSection() {
       <div className="relative flex items-center justify-center">
         <div className="relative w-full max-w-[440px]">
           <div className="animate-glow-pulse pointer-events-none absolute left-1/2 top-1/2 h-[340px] w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(202,255,21,0.12)_0%,transparent_70%)]" />
-          <HeroMascot />
+          <img
+            src={olafOriginal}
+            alt="Olaf — The Original, AI Co-CEO of Vibe Factory"
+            className="animate-float relative z-10 w-full drop-shadow-[0_0_30px_rgba(202,255,21,0.2)]"
+          />
         </div>
       </div>
     </section>
