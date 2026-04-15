@@ -134,3 +134,8 @@
 .animate-pulse-dot { animation: pulse-dot 2s infinite; }
 .animate-float { animation: float 6s ease-in-out infinite; }
 .animate-glow-pulse { animation: glow-pulse 4s ease-in-out infinite; }
+
+@keyframes clawPulse {
+  0%, 100% { filter: drop-shadow(0 0 6px #CAFF15); }
+  50% { filter: drop-shadow(0 0 18px #CAFF15) drop-shadow(0 0 32px rgba(202,255,21,0.5)); }
+}
