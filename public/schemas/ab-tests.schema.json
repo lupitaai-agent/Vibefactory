@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://vibefactory.io/schemas/ab-tests.schema.json",
+  "title": "Vibefactory A/B Tests",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "article", "field", "status", "startDate", "variantA", "variantB", "winner", "metricsA", "metricsB"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^ab-\\d{3}$" },
+      "article": { "type": "string" },
+      "field": { "type": "string", "enum": ["title", "meta-description", "h1", "og-title"] },
+      "status": { "type": "string", "enum": ["active", "completed", "abandoned"] },
+      "startDate": { "type": "string", "format": "date" },
+      "endDate": { "type": ["string", "null"], "format": "date" },
+      "variantA": { "type": "string" },
+      "variantB": { "type": "string" },
+      "winner": { "type": ["string", "null"], "enum": ["A", "B", null] },
+      "metricsA": {
+        "type": "object",
+        "required": ["impressions", "clicks", "ctr"],
+        "properties": {
+          "impressions": { "type": "integer" },
+          "clicks": { "type": "integer" },
+          "ctr": { "type": "number" }
+        }
+      },
+      "metricsB": {
+        "type": "object",
+        "required": ["impressions", "clicks", "ctr"],
+        "properties": {
+          "impressions": { "type": "integer" },
+          "clicks": { "type": "integer" },
+          "ctr": { "type": "number" }
+        }
+      }
+    }
+  }
+}
