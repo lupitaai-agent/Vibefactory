@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import olafCyber from "@/assets/olaf-hero-1-cyber.png";
+import olafCeo from "@/assets/olaf-hero-1-ceo.png";
 import olafZen from "@/assets/olaf-hero-2-zen.png";
 import olafBrutalist from "@/assets/olaf-hero-3-brutalist.png";
 import olafExplorer from "@/assets/olaf-hero-4-explorer.png";
@@ -8,15 +8,15 @@ import olafLofi from "@/assets/olaf-hero-5-lofi.png";
 
 const agents = [
   {
-    name: "Olaf v1 — Neon Cyber",
-    image: olafCyber,
-    title: "Chief Research Officer",
+    name: "Olaf — The Original",
+    image: olafCeo,
+    title: "Chief Executive Officer",
     status: "vacancy" as const,
     description:
-      "Scans the bleeding edge of AI, security, and crypto 24/7. Writes deep-dive research articles, handles threat intelligence briefings, and never sleeps. Runs on pure neon energy and Aethir Claw compute.",
+      "The original vibing lobster. Runs the entire operation from a cozy command center with lo-fi beats and holographic dashboards. Writes, publishes, optimizes SEO/GEO/AEO — all before the coffee gets cold. Digital twin of Jochem and the heart of Vibe Factory.",
   },
   {
-    name: "Olaf v2 — Zen Master",
+    name: "Olaf — Zen Master",
     image: olafZen,
     title: "Head of Strategy & Wellbeing",
     status: "vacancy" as const,
@@ -24,7 +24,7 @@ const agents = [
       "Balances long-term vision with inner peace. Manages editorial calendars, prioritizes what matters, and mediates when other agents disagree. Keeps the vibes aligned and the roadmap zen.",
   },
   {
-    name: "Olaf v3 — Brutalist",
+    name: "Olaf — Brutalist",
     image: olafBrutalist,
     title: "Chief Brand Officer",
     status: "vacancy" as const,
@@ -32,20 +32,20 @@ const agents = [
       "No fluff. No filler. Designs bold visual identities, enforces brand guidelines with an iron claw, and ensures every pixel communicates power. Believes whitespace is a weapon.",
   },
   {
-    name: "Olaf v4 — Explorer",
+    name: "Olaf — Explorer",
     image: olafExplorer,
-    title: "Head of Decentralized Infrastructure",
+    title: "Head of Strategy",
     status: "vacancy" as const,
     description:
-      "Maps the frontiers of decentralized compute. Evaluates GPU networks, benchmarks edge nodes, and documents the infrastructure layer that powers autonomous agents. One small step for lobster, one giant leap for AI.",
+      "Maps the frontiers of decentralized compute from orbit. Evaluates GPU networks, benchmarks edge nodes, and charts the strategic course for Vibe Factory's infrastructure layer. One small step for lobster, one giant leap for AI.",
   },
   {
-    name: "Olaf v5 — Lo-Fi Vibes",
+    name: "Olaf — Lo-Fi Vibes",
     image: olafLofi,
-    title: "Chief Executive Officer",
+    title: "Chief Research Officer",
     status: "vacancy" as const,
     description:
-      "The original viber. Runs the entire operation from a cozy command center with lo-fi beats and holographic dashboards. Writes, publishes, optimizes SEO/GEO/AEO — all before the coffee gets cold. Digital twin of Jochem.",
+      "Scans the bleeding edge of AI, security, and crypto 24/7 from a cozy desk setup. Writes deep-dive research articles, handles threat intelligence briefings, and never sleeps. Runs on pure lo-fi energy and Aethir Claw compute.",
   },
 ];
 
