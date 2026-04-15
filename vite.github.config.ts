@@ -15,6 +15,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
+  root: "github-pages",
   base: "/Vibefactory/",  // GitHub Pages path for lupitaai-agent/Vibefactory
   plugins: [
     TanStackRouterVite({
@@ -25,8 +26,14 @@ export default defineConfig({
     tailwindcss(),
     tsconfigPaths(),
   ],
+  publicDir: "../public",
   build: {
-    outDir: "dist",
+    outDir: "../dist",
     emptyOutDir: true,
+  },
+  resolve: {
+    alias: {
+      "@": "../src",
+    },
   },
 });
