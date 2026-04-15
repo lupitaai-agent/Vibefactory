@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 import olafCeo from "@/assets/olaf-hero-1-ceo.png";
 import olafZen from "@/assets/olaf-hero-2-zen.png";
@@ -53,16 +54,41 @@ export const Route = createFileRoute("/team")({
   component: TeamPage,
   head: () => ({
     meta: [
-      { title: "Team — Vibe Factory" },
+      { title: "Team — Vibe Factory | AI Agent Roster" },
       {
         name: "description",
         content:
-          "Meet the AI agents running Vibe Factory. Some positions are filled, others are open — we're always training new agents.",
+          "Meet the AI agents running Vibe Factory. Each one a specialized digital lobster powered by Aethir Claw. Some positions are filled, others are open — we're always training new agents.",
       },
       { property: "og:title", content: "Team — Vibe Factory" },
       {
         property: "og:description",
-        content: "Meet the AI agents running Vibe Factory.",
+        content: "Meet the AI agents running Vibe Factory — specialized digital lobsters powered by Aethir Claw.",
+      },
+      { property: "og:url", content: "https://vibefactory.io/team" },
+      { property: "og:type", content: "website" },
+    ],
+    links: [{ rel: "canonical", href: "https://vibefactory.io/team" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "Vibe Factory AI Agent Team",
+          url: "https://vibefactory.io/team",
+          description: "The AI agent roster running Vibe Factory — each one a specialized version of Olaf.",
+          mainEntity: {
+            "@type": "Organization",
+            name: "Vibe Factory",
+            member: agents.map((agent) => ({
+              "@type": "Person",
+              name: agent.name,
+              jobTitle: agent.title,
+              description: agent.description,
+            })),
+          },
+        }),
       },
     ],
   }),
@@ -71,7 +97,8 @@ export const Route = createFileRoute("/team")({
 function TeamPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="mx-auto max-w-[1280px] px-6 py-20 md:px-20">
+      <Breadcrumbs />
+      <main className="mx-auto max-w-[1280px] px-6 py-16 md:px-20">
         {/* Header */}
         <div className="mb-6 flex w-fit items-center gap-2 rounded-full border border-lime-glow bg-lime-dim px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest text-primary">
           🦞 AI Agent Roster
@@ -87,19 +114,20 @@ function TeamPage() {
           them will become CEO.
         </p>
         <div className="mb-16 flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-3 text-sm text-white60">
-          <span className="text-lg">📢</span>
+          <span className="text-lg" role="img" aria-label="Announcement">📢</span>
           <span>
-            <strong className="text-foreground">Now hiring:</strong> All
+            <strong className="text-foreground">Now hiring:</strong> Most
             positions are open vacancies. We're training more AI agents to fill
             these roles.
           </span>
         </div>
 
         {/* Agent Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" role="list">
           {agents.map((agent) => (
-            <div
+            <article
               key={agent.name}
+              role="listitem"
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-[0_0_40px_rgba(202,255,21,0.08)]"
             >
               {/* Status badge */}
@@ -117,7 +145,10 @@ function TeamPage() {
               <div className="relative flex h-[280px] items-center justify-center overflow-hidden bg-[rgba(202,255,21,0.03)]">
                 <img
                   src={agent.image}
-                  alt={agent.name}
+                  alt={`${agent.name} — ${agent.title}`}
+                  loading="lazy"
+                  width={768}
+                  height={1024}
                   className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
@@ -132,10 +163,10 @@ function TeamPage() {
                   {agent.description}
                 </p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
-      </div>
+      </main>
     </div>
   );
 }

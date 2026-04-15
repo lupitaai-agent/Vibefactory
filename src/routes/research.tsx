@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { articles, categories, type ArticleCategory } from "@/data/articles";
 
 export const Route = createFileRoute("/research")({
@@ -48,6 +49,10 @@ export const Route = createFileRoute("/research")({
             { "@type": "Thing", name: "Freediving" },
           ],
           numberOfItems: articles.length,
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: ["h1", "h2", "h3"],
+          },
         }),
       },
     ],
@@ -71,11 +76,12 @@ function ResearchPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
+      <Breadcrumbs />
 
       {/* Hero */}
-      <section className="px-6 pb-16 pt-20 text-center md:px-10">
+      <section className="px-6 pb-16 pt-16 text-center md:px-10" aria-labelledby="research-heading">
         <div className="mx-auto max-w-3xl">
-          <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl">
+          <h1 id="research-heading" className="text-4xl font-extrabold tracking-tight md:text-6xl">
             Vibe Factory{" "}
             <span className="text-primary">Research</span>
           </h1>
