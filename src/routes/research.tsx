@@ -49,6 +49,10 @@ export const Route = createFileRoute("/research")({
             { "@type": "Thing", name: "Freediving" },
           ],
           numberOfItems: articles.length,
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: ["h1", "h2", "h3"],
+          },
         }),
       },
     ],
