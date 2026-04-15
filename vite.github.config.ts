@@ -15,7 +15,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
-  // base: "/repo-name/",  // ← uncomment & set if NOT using a custom domain
+  base: "/Vibefactory/",  // GitHub Pages path for lupitaai-agent/Vibefactory
   plugins: [
     TanStackRouterVite({
       target: "react",
