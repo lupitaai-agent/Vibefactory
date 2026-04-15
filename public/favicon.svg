@@ -5,8 +5,14 @@
   <circle cx="15" cy="12" r="1.8" fill="#CAFF15"/><circle cx="21" cy="12" r="1.8" fill="#CAFF15"/>
   <circle cx="15.6" cy="12.4" r="0.7" fill="#1A1B1F"/><circle cx="21.6" cy="12.4" r="0.7" fill="#1A1B1F"/>
   <path d="M10 13 Q18 5 26 13" stroke="#CAFF15" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <rect x="8.5" y="12.5" width="3" height="4" rx="1.5" fill="#CAFF15"/>
-  <rect x="24.5" y="12.5" width="3" height="4" rx="1.5" fill="#CAFF15"/>
-  <ellipse cx="8" cy="23" rx="4" ry="3" fill="#CAFF15" transform="rotate(-20 8 23)"/>
-  <ellipse cx="28" cy="23" rx="4" ry="3" fill="#CAFF15" transform="rotate(20 28 23)"/>
+  <!-- Left lobster pincer -->
+  <ellipse cx="6" cy="17" rx="4" ry="3" fill="#CAFF15" transform="rotate(-10 6 17)"/>
+  <path d="M3 14.5 Q1 13 1.5 12 Q2 11.5 3 12.5" fill="#CAFF15"/>
+  <path d="M3 19.5 Q1 21 1.5 22 Q2 22.5 3 21.5" fill="#CAFF15"/>
+  <path d="M1.8 12.8 Q3 17 1.8 21.2" stroke="#1A1B1F" stroke-width="0.8" fill="none"/>
+  <!-- Right lobster pincer -->
+  <ellipse cx="30" cy="17" rx="4" ry="3" fill="#CAFF15" transform="rotate(10 30 17)"/>
+  <path d="M33 14.5 Q35 13 34.5 12 Q34 11.5 33 12.5" fill="#CAFF15"/>
+  <path d="M33 19.5 Q35 21 34.5 22 Q34 22.5 33 21.5" fill="#CAFF15"/>
+  <path d="M34.2 12.8 Q33 17 34.2 21.2" stroke="#1A1B1F" stroke-width="0.8" fill="none"/>
 </svg>
