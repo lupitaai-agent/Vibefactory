@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ClawLogo } from "./ClawLogo";
 
 const navLinks = [
-  { label: "Research", href: "#how-it-works" },
+  { label: "Research", href: "/research" },
   { label: "Metrics", href: "#categories" },
   { label: "About Olaf", href: "#agaas" },
   { label: "AGAAS", href: "#agaas" },
@@ -16,11 +16,17 @@ export function Navbar() {
         VIBE FACTORY
       </Link>
       <div className="hidden items-center gap-7 md:flex">
-        {navLinks.map((link) => (
-          <a key={link.label} href={link.href} className="text-sm font-medium text-white60 transition-colors hover:text-foreground">
-            {link.label}
-          </a>
-        ))}
+        {navLinks.map((link) =>
+          link.href.startsWith("/") ? (
+            <Link key={link.label} to={link.href} className="text-sm font-medium text-white60 transition-colors hover:text-foreground">
+              {link.label}
+            </Link>
+          ) : (
+            <a key={link.label} href={link.href} className="text-sm font-medium text-white60 transition-colors hover:text-foreground">
+              {link.label}
+            </a>
+          )
+        )}
         <a
           href="https://claw.aethir.com"
           target="_blank"
