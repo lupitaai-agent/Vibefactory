@@ -3,7 +3,7 @@ import { ClawLogo } from "./ClawLogo";
 
 const navLinks = [
   { label: "Research", href: "/research" },
-  { label: "Metrics", href: "#categories" },
+  { label: "Metrics", href: "/metrics" },
   { label: "About Olaf", href: "#agaas" },
   { label: "AGAAS", href: "#agaas" },
 ];
