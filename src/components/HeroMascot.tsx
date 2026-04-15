@@ -64,21 +64,37 @@ export function HeroMascot() {
       <path d="M110 195 Q72 210 60 235" stroke="#CAFF15" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
       <path d="M210 190 Q248 168 262 148" stroke="#2A2B33" strokeWidth="14" fill="none" strokeLinecap="round"/>
       <path d="M210 190 Q248 168 262 148" stroke="#CAFF15" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-      {/* Left claw */}
+      {/* Left claw — lobster pincer */}
       <g className="animate-[clawPulse_3s_ease-in-out_infinite]">
-        <ellipse cx="52" cy="250" rx="22" ry="16" fill="#CAFF15" transform="rotate(-15 52 250)"/>
-        <ellipse cx="38" cy="238" rx="16" ry="10" fill="#CAFF15" transform="rotate(-35 38 238)"/>
-        <ellipse cx="40" cy="263" rx="16" ry="9" fill="#CAFF15" transform="rotate(10 40 263)"/>
-        <path d="M24 248 Q34 254 24 260" fill="#1A1B1F"/>
-        <ellipse cx="55" cy="246" rx="8" ry="5" fill="rgba(255,255,255,0.15)" transform="rotate(-15 55 246)"/>
+        {/* Claw base/palm */}
+        <ellipse cx="48" cy="248" rx="26" ry="20" fill="#CAFF15" transform="rotate(-10 48 248)"/>
+        {/* Upper pincer finger */}
+        <path d="M28 240 Q10 228 6 218 Q4 212 12 214 Q22 218 30 232" fill="#CAFF15" stroke="#1A1B1F" strokeWidth="1"/>
+        {/* Lower pincer finger */}
+        <path d="M28 256 Q10 268 6 278 Q4 284 12 282 Q22 278 30 264" fill="#CAFF15" stroke="#1A1B1F" strokeWidth="1"/>
+        {/* Pincer gap */}
+        <path d="M14 218 Q24 248 14 278" stroke="#1A1B1F" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+        {/* Claw highlight */}
+        <ellipse cx="52" cy="244" rx="10" ry="7" fill="rgba(255,255,255,0.15)" transform="rotate(-10 52 244)"/>
+        {/* Knuckle bumps */}
+        <circle cx="36" cy="236" r="3" fill="#b8e600"/>
+        <circle cx="36" cy="260" r="3" fill="#b8e600"/>
       </g>
-      {/* Right claw raised */}
+      {/* Right claw raised — lobster pincer */}
       <g className="animate-[clawPulse_3s_ease-in-out_infinite]">
-        <ellipse cx="268" cy="142" rx="22" ry="16" fill="#CAFF15" transform="rotate(25 268 142)"/>
-        <ellipse cx="280" cy="128" rx="16" ry="10" fill="#CAFF15" transform="rotate(15 280 128)"/>
-        <ellipse cx="282" cy="155" rx="16" ry="9" fill="#CAFF15" transform="rotate(-20 282 155)"/>
-        <path d="M292 138 Q282 144 292 150" fill="#1A1B1F"/>
-        <ellipse cx="265" cy="138" rx="8" ry="5" fill="rgba(255,255,255,0.15)" transform="rotate(25 265 138)"/>
+        {/* Claw base/palm */}
+        <ellipse cx="272" cy="140" rx="26" ry="20" fill="#CAFF15" transform="rotate(20 272 140)"/>
+        {/* Upper pincer finger */}
+        <path d="M290 128 Q308 116 314 106 Q316 100 308 102 Q298 106 288 120" fill="#CAFF15" stroke="#1A1B1F" strokeWidth="1"/>
+        {/* Lower pincer finger */}
+        <path d="M290 152 Q308 164 314 174 Q316 180 308 178 Q298 174 288 160" fill="#CAFF15" stroke="#1A1B1F" strokeWidth="1"/>
+        {/* Pincer gap */}
+        <path d="M306 106 Q296 140 306 170" stroke="#1A1B1F" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+        {/* Claw highlight */}
+        <ellipse cx="268" cy="136" rx="10" ry="7" fill="rgba(255,255,255,0.15)" transform="rotate(20 268 136)"/>
+        {/* Knuckle bumps */}
+        <circle cx="284" cy="128" r="3" fill="#b8e600"/>
+        <circle cx="284" cy="152" r="3" fill="#b8e600"/>
       </g>
       {/* Vibe particles */}
       <circle cx="280" cy="100" r="3" fill="#CAFF15" opacity="0.5"/>
