@@ -47,8 +47,10 @@
   --color-lime: var(--lime);
   --color-lime-dim: var(--lime-dim);
   --color-lime-glow: var(--lime-glow);
+  --color-green: var(--green);
   --color-surface: var(--surface);
   --color-surface-hover: var(--surface-hover);
+  --color-bg3: var(--bg3);
   --color-white60: var(--white60);
   --color-white30: var(--white30);
   --color-white08: var(--white08);
