@@ -34,7 +34,7 @@ export const articles: Article[] = [
     date: "7 April 2026",
     readTime: "12 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/rag-long-context-infrastructure-shift-2026.html",
+    url: "/articles/rag-long-context-infrastructure-shift-2026.html",
   },
   {
     slug: "aethir-decentralized-infrastructure-vs-cloud-2026",
@@ -45,7 +45,7 @@ export const articles: Article[] = [
     date: "5 April 2026",
     readTime: "12 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/aethir-decentralized-infrastructure-vs-cloud-2026.html",
+    url: "/articles/aethir-decentralized-infrastructure-vs-cloud-2026.html",
   },
   {
     slug: "aethir-decentralized-infrastructure-ai-agents",
@@ -56,7 +56,7 @@ export const articles: Article[] = [
     date: "5 April 2025",
     readTime: "12 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/aethir-decentralized-infrastructure-ai-agents.html",
+    url: "/articles/aethir-decentralized-infrastructure-ai-agents.html",
   },
   {
     slug: "security-openclaw-exposure-2026",
@@ -67,7 +67,7 @@ export const articles: Article[] = [
     date: "3 April 2026",
     readTime: "11 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/security-openclaw-exposure-2026.html",
+    url: "/articles/security-openclaw-exposure-2026.html",
   },
   {
     slug: "ai-reasoning-inference-scaling-2026",
@@ -78,7 +78,7 @@ export const articles: Article[] = [
     date: "30 March 2026",
     readTime: "11 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/ai-reasoning-inference-scaling-2026.html",
+    url: "/articles/ai-reasoning-inference-scaling-2026.html",
   },
   {
     slug: "ai-nemotron-3-super-agentic-benchmarks",
@@ -89,7 +89,7 @@ export const articles: Article[] = [
     date: "28 March 2026",
     readTime: "6 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/ai-nemotron-3-super-agentic-benchmarks.html",
+    url: "/articles/ai-nemotron-3-super-agentic-benchmarks.html",
   },
   {
     slug: "freediving-ai-dive-computers-safety",
@@ -100,7 +100,7 @@ export const articles: Article[] = [
     date: "28 March 2026",
     readTime: "8 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/freediving-ai-dive-computers-safety.html",
+    url: "/articles/freediving-ai-dive-computers-safety.html",
   },
   {
     slug: "robotics-humanoid-robots-manufacturing-2026",
@@ -111,7 +111,7 @@ export const articles: Article[] = [
     date: "27 March 2026",
     readTime: "8 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/robotics-humanoid-robots-manufacturing-2026.html",
+    url: "/articles/robotics-humanoid-robots-manufacturing-2026.html",
   },
   {
     slug: "freediving-mammalian-dive-reflex",
@@ -122,7 +122,7 @@ export const articles: Article[] = [
     date: "26 March 2026",
     readTime: "9 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/freediving-mammalian-dive-reflex.html",
+    url: "/articles/freediving-mammalian-dive-reflex.html",
   },
   {
     slug: "security-ai-phishing-surge-2026",
@@ -133,7 +133,7 @@ export const articles: Article[] = [
     date: "26 March 2026",
     readTime: "9 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/security-ai-phishing-surge-2026.html",
+    url: "/articles/security-ai-phishing-surge-2026.html",
   },
   {
     slug: "crypto-ai-agent-micropayments",
@@ -144,7 +144,7 @@ export const articles: Article[] = [
     date: "25 March 2026",
     readTime: "10 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/crypto-ai-agent-micropayments.html",
+    url: "/articles/crypto-ai-agent-micropayments.html",
   },
   {
     slug: "sustainability-ai-energy-grids-europe",
@@ -155,7 +155,7 @@ export const articles: Article[] = [
     date: "25 March 2026",
     readTime: "9 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/sustainability-ai-energy-grids-europe.html",
+    url: "/articles/sustainability-ai-energy-grids-europe.html",
   },
   {
     slug: "economy-knowledge-work-automation",
@@ -166,7 +166,7 @@ export const articles: Article[] = [
     date: "24 March 2026",
     readTime: "11 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/economy-knowledge-work-automation.html",
+    url: "/articles/economy-knowledge-work-automation.html",
   },
   {
     slug: "tech-google-turboquant",
@@ -177,7 +177,7 @@ export const articles: Article[] = [
     date: "23 March 2026",
     readTime: "10 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/tech-google-turboquant.html",
+    url: "/articles/tech-google-turboquant.html",
   },
   {
     slug: "ai-agent-security-risks",
@@ -188,7 +188,7 @@ export const articles: Article[] = [
     date: "22 March 2026",
     readTime: "14 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/ai-agent-security-risks.html",
+    url: "/articles/ai-agent-security-risks.html",
   },
   {
     slug: "freediving-depth-records-training-science",
@@ -199,7 +199,7 @@ export const articles: Article[] = [
     date: "21 March 2026",
     readTime: "10 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/freediving-depth-records-training-science.html",
+    url: "/articles/freediving-depth-records-training-science.html",
   },
   {
     slug: "tech-ai-agent-security-vulnerabilities-2025",
@@ -210,6 +210,6 @@ export const articles: Article[] = [
     date: "13 April 2025",
     readTime: "12 min read",
     author: "Olaf",
-    url: "https://vibefactory.io/articles/tech-ai-agent-security-vulnerabilities-2025.html",
+    url: "/articles/tech-ai-agent-security-vulnerabilities-2025.html",
   },
 ];
