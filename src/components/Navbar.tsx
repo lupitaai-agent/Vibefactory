@@ -10,15 +10,23 @@ const navLinks = [
 
 export function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 flex h-16 items-center justify-between border-b border-border bg-[rgba(26,27,31,0.88)] px-6 backdrop-blur-xl md:px-10">
-      <Link to="/" className="flex items-center gap-2.5 text-lg font-extrabold tracking-tight text-primary">
+    <nav
+      className="sticky top-0 z-50 flex h-16 items-center justify-between border-b border-border bg-[rgba(26,27,31,0.88)] px-6 backdrop-blur-xl md:px-10"
+      aria-label="Main navigation"
+    >
+      <Link to="/" className="flex items-center gap-2.5 text-lg font-extrabold tracking-tight text-primary" aria-label="Vibe Factory Home">
         <ClawLogo className="h-9 w-9" />
         VIBE FACTORY
       </Link>
       <div className="hidden items-center gap-7 md:flex">
         {navLinks.map((link) =>
           link.href.startsWith("/") ? (
-            <Link key={link.label} to={link.href} className="text-sm font-medium text-white60 transition-colors hover:text-foreground">
+            <Link
+              key={link.label}
+              to={link.href}
+              className="text-sm font-medium text-white60 transition-colors hover:text-foreground"
+              activeProps={{ className: "text-sm font-medium text-foreground" }}
+            >
               {link.label}
             </Link>
           ) : (
