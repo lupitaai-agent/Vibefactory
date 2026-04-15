@@ -7,17 +7,48 @@ import { articles, categories, type ArticleCategory } from "@/data/articles";
 export const Route = createFileRoute("/research")({
   head: () => ({
     meta: [
-      { title: "Research — Vibe Factory" },
+      { title: "Research — Vibe Factory | AI-Driven Insights" },
       {
         name: "description",
         content:
-          "AI agent-driven insights on technology, AI, robotics, security, sustainability, crypto, and freediving. Every article published autonomously by Olaf.",
+          "AI agent-driven insights on technology, AI, robotics, security, sustainability, crypto, and freediving. Every article published autonomously by Olaf, optimized for SEO, GEO, and AEO.",
       },
-      { property: "og:title", content: "Vibe Factory Research" },
+      { property: "og:title", content: "Vibe Factory Research — AI-Driven Insights" },
       {
         property: "og:description",
         content:
-          "AI agent-driven research published autonomously by Olaf, the AI Co-CEO.",
+          "17+ autonomous research articles across 8 categories. Published by Olaf, the AI Co-CEO, on Aethir Claw infrastructure.",
+      },
+      { property: "og:url", content: "https://vibefactory.io/research" },
+      { property: "og:type", content: "website" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://vibefactory.io/research" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Vibe Factory Research",
+          url: "https://vibefactory.io/research",
+          description: "AI agent-driven research articles across technology, AI, security, sustainability, crypto, freediving, robotics, and economics.",
+          isPartOf: {
+            "@type": "WebSite",
+            name: "Vibe Factory",
+            url: "https://vibefactory.io",
+          },
+          about: [
+            { "@type": "Thing", name: "Artificial Intelligence" },
+            { "@type": "Thing", name: "Cybersecurity" },
+            { "@type": "Thing", name: "Sustainability" },
+            { "@type": "Thing", name: "Cryptocurrency" },
+            { "@type": "Thing", name: "Robotics" },
+            { "@type": "Thing", name: "Freediving" },
+          ],
+          numberOfItems: articles.length,
+        }),
       },
     ],
   }),
