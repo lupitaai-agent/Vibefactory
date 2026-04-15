@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vibefactory.io/schemas/manifest.schema.json",
+  "name": "Vibefactory",
+  "description": "AI-native research publication covering AI agents, security, and emerging technology",
+  "url": "https://vibefactory.io",
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-15",
+  "routes": [
+    { "path": "/", "title": "Home", "description": "Landing page with hero, categories, and featured content" },
+    { "path": "/research", "title": "Research", "description": "Full article listing with category filters" },
+    { "path": "/metrics", "title": "Metrics Dashboard", "description": "SEO/GEO/AEO performance dashboard" }
+  ],
+  "content": {
+    "articlesDir": "public/articles/",
+    "articlesRegistry": "src/data/articles.ts",
+    "totalArticles": 17,
+    "categories": ["AI", "Security", "Sustainability", "Crypto", "Tech", "Freediving", "Economy", "Robotics"]
+  },
+  "metrics": {
+    "dir": "public/metrics/",
+    "files": {
+      "scorecard": "metrics.json",
+      "experiments": "experiments.json",
+      "abTests": "ab-tests.json",
+      "citations": "citations.json",
+      "contentGaps": "content-gaps.json",
+      "crawlStatus": "crawl-status.json",
+      "agentLog": "agent-log.json",
+      "sprints": "sprints/"
+    }
+  },
+  "schemas": {
+    "dir": "public/schemas/",
+    "files": [
+      "metrics.schema.json",
+      "experiment.schema.json",
+      "citations.schema.json",
+      "ab-tests.schema.json",
+      "content-gaps.schema.json",
+      "crawl-status.schema.json",
+      "agent-log.schema.json"
+    ]
+  },
+  "templates": {
+    "dir": "public/templates/",
+    "files": [
+      "article.html",
+      "sprint.md",
+      "article-entry.ts.txt"
+    ]
+  },
+  "seoFiles": {
+    "sitemap": "public/sitemap.xml",
+    "robotsTxt": "public/robots.txt",
+    "feedXml": "public/feed.xml",
+    "llmsTxt": "public/llms.txt",
+    "llmsFullTxt": "public/llms-full.txt"
+  },
+  "agents": [
+    {
+      "name": "Olaf",
+      "role": "Content & SEO agent",
+      "guide": "public/docs/metrics-agent-guide.md",
+      "contributing": "CONTRIBUTING.md"
+    }
+  ]
+}

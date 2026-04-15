@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://vibefactory.io/schemas/experiment.schema.json",
+  "title": "Vibefactory Experiment",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "title", "hypothesis", "category", "status", "startDate", "endDate", "actions", "metrics", "result"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^exp-\\d{3}$" },
+      "title": { "type": "string" },
+      "hypothesis": { "type": "string" },
+      "category": { "type": "string", "enum": ["SEO", "GEO", "AEO", "Content", "Technical"] },
+      "status": { "type": "string", "enum": ["planned", "active", "completed", "abandoned"] },
+      "startDate": { "type": ["string", "null"], "format": "date" },
+      "endDate": { "type": ["string", "null"], "format": "date" },
+      "actions": { "type": "array", "items": { "type": "string" } },
+      "metrics": {
+        "type": "object",
+        "properties": {
+          "before": { "type": "object" },
+          "after": { "type": "object" }
+        }
+      },
+      "result": { "type": ["string", "null"], "enum": ["pass", "fail", "inconclusive", null] }
+    }
+  }
+}
