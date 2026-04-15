@@ -57,49 +57,51 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.17 0.005 270);
-  --foreground: oklch(1 0 0);
-  --card: oklch(0.20 0.005 270);
-  --card-foreground: oklch(1 0 0);
-  --popover: oklch(0.20 0.005 270);
-  --popover-foreground: oklch(1 0 0);
-  --primary: oklch(0.88 0.2 110);
-  --primary-foreground: oklch(0.15 0.03 120);
-  --secondary: oklch(0.22 0.005 270);
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.22 0.005 270);
-  --muted-foreground: oklch(0.7 0 0 / 60%);
-  --accent: oklch(0.22 0.005 270);
-  --accent-foreground: oklch(1 0 0);
+  --background: #1A1B1F;
+  --foreground: #FFFFFF;
+  --card: #22232A;
+  --card-foreground: #FFFFFF;
+  --popover: #22232A;
+  --popover-foreground: #FFFFFF;
+  --primary: #CAFF15;
+  --primary-foreground: #0D1200;
+  --secondary: #22232A;
+  --secondary-foreground: #FFFFFF;
+  --muted: #22232A;
+  --muted-foreground: rgba(255,255,255,0.6);
+  --accent: #22232A;
+  --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 7%);
-  --input: oklch(1 0 0 / 7%);
-  --ring: oklch(0.88 0.2 110);
-  --chart-1: oklch(0.88 0.2 110);
+  --border: rgba(255,255,255,0.07);
+  --input: rgba(255,255,255,0.07);
+  --ring: #CAFF15;
+  --chart-1: #CAFF15;
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.20 0.005 270);
-  --sidebar-foreground: oklch(1 0 0);
-  --sidebar-primary: oklch(0.88 0.2 110);
-  --sidebar-primary-foreground: oklch(0.15 0.03 120);
-  --sidebar-accent: oklch(0.22 0.005 270);
-  --sidebar-accent-foreground: oklch(1 0 0);
-  --sidebar-border: oklch(1 0 0 / 7%);
-  --sidebar-ring: oklch(0.88 0.2 110);
+  --sidebar: #22232A;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #CAFF15;
+  --sidebar-primary-foreground: #0D1200;
+  --sidebar-accent: #22232A;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255,255,255,0.07);
+  --sidebar-ring: #CAFF15;
 
   /* Custom Vibe Factory tokens */
-  --lime: oklch(0.88 0.2 110);
-  --lime-dim: oklch(0.88 0.2 110 / 10%);
-  --lime-glow: oklch(0.88 0.2 110 / 22%);
-  --surface: oklch(0.20 0.005 270);
-  --surface-hover: oklch(0.24 0.005 270);
-  --white60: oklch(1 0 0 / 60%);
-  --white30: oklch(1 0 0 / 30%);
-  --white08: oklch(1 0 0 / 8%);
-  --white05: oklch(1 0 0 / 5%);
+  --lime: #CAFF15;
+  --lime-dim: rgba(202,255,21,0.10);
+  --lime-glow: rgba(202,255,21,0.22);
+  --green: #30E000;
+  --surface: #22232A;
+  --surface-hover: #2A2B33;
+  --bg3: #2A2B33;
+  --white60: rgba(255,255,255,0.6);
+  --white30: rgba(255,255,255,0.3);
+  --white08: rgba(255,255,255,0.08);
+  --white05: rgba(255,255,255,0.05);
 }
 
 @layer base {
