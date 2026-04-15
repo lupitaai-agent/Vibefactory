@@ -61,7 +61,7 @@ export function ExperimentTracker() {
                   {exp.result === "pass" && (
                     <span className="text-xs font-bold text-primary">✓ PASS</span>
                   )}
-                  {exp.result === "fail" && (
+                  {exp.result !== "pass" && exp.result !== null && (
                     <span className="text-xs font-bold text-red-400">✗ FAIL</span>
                   )}
                 </div>
