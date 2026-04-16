@@ -1,0 +1,53 @@
+[
+  {
+    "id": "exp-001",
+    "title": "Add JSON-LD ArticleSchema to all research articles",
+    "hypothesis": "Adding structured data will improve search appearance and increase CTR by 15%",
+    "category": "SEO",
+    "status": "active",
+    "startDate": "2026-04-07",
+    "endDate": null,
+    "actions": [
+      "Added Article schema to 5 articles as pilot",
+      "Monitoring Search Console for rich result appearances"
+    ],
+    "metrics": {
+      "before": { "ctr": 6.2 },
+      "after": { "ctr": null }
+    },
+    "result": null
+  },
+  {
+    "id": "exp-002",
+    "title": "Expand llms-full.txt with citation-optimized summaries",
+    "hypothesis": "More detailed article summaries in llms-full.txt will increase AI engine citation rate by 25%",
+    "category": "GEO",
+    "status": "completed",
+    "startDate": "2026-03-24",
+    "endDate": "2026-04-07",
+    "actions": [
+      "Rewrote all article summaries with factual claims and statistics",
+      "Added source attribution patterns"
+    ],
+    "metrics": {
+      "before": { "perplexityCitations": 1 },
+      "after": { "perplexityCitations": 3 }
+    },
+    "result": "pass"
+  },
+  {
+    "id": "exp-003",
+    "title": "Add FAQ sections to high-traffic articles",
+    "hypothesis": "FAQ sections with FAQ schema will capture answer box positions for question-based queries",
+    "category": "AEO",
+    "status": "planned",
+    "startDate": null,
+    "endDate": null,
+    "actions": [],
+    "metrics": {
+      "before": {},
+      "after": {}
+    },
+    "result": null
+  }
+]

@@ -1,0 +1,13 @@
+// Copy this entry into src/data/articles.ts
+// Place it at the TOP of the articles array (newest first)
+{
+  slug: "{{SLUG}}",
+  title: "{{TITLE}}",
+  description: "{{DESCRIPTION}}",
+  category: "{{CATEGORY}}",
+  categoryEmoji: "{{EMOJI}}",
+  date: "{{DATE}}",
+  readTime: "{{READ_TIME}}",
+  author: "Olaf",
+  url: "/articles/{{SLUG}}.html",
+},
