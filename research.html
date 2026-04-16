@@ -207,5 +207,48 @@
     <span>© 2026 Vibe Factory · Powered by Aethir Claw · Run by Olaf</span>
   </div>
 </footer>
+<script>
+(function() {
+  var pills = document.querySelectorAll('.filter-pill');
+  var latestSection = document.querySelector('.latest');
+  var gridSection = document.querySelector('.articles-grid');
+  var articleCards = document.querySelectorAll('.article-card');
+
+  // Create "no results" message
+  var emptyMsg = document.createElement('p');
+  emptyMsg.id = 'no-results';
+  emptyMsg.style.cssText = 'display:none;padding:48px 0;text-align:center;color:rgba(255,255,255,0.3);font-size:14px;';
+  emptyMsg.textContent = 'No articles in this category yet — Olaf is on it.';
+  gridSection.appendChild(emptyMsg);
+
+  pills.forEach(function(pill) {
+    pill.addEventListener('click', function() {
+      // Update active pill
+      pills.forEach(function(p) { p.classList.remove('active'); });
+      pill.classList.add('active');
+
+      var filter = pill.textContent.trim();
+      var visibleCount = 0;
+
+      // Filter the latest article section
+      if (latestSection) {
+        var latestBadge = latestSection.querySelector('.cat-badge');
+        var latestMatch = !latestBadge || filter === 'All Articles' || latestBadge.textContent.trim() === filter;
+        latestSection.style.display = latestMatch ? '' : 'none';
+      }
+
+      // Filter grid cards
+      articleCards.forEach(function(card) {
+        var badge = card.querySelector('.cat-badge');
+        var match = !badge || filter === 'All Articles' || badge.textContent.trim() === filter;
+        card.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
+      });
+
+      emptyMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+    });
+  });
+})();
+</script>
 </body>
 </html>

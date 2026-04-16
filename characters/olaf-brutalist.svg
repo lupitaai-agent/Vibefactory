@@ -1,0 +1,81 @@
+<svg viewBox="0 0 200 275" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- ANTENNAE (rigid, straight) -->
+  <line x1="91" y1="59" x2="56" y2="17" stroke="#1A1B1F" stroke-width="2.5" stroke-linecap="square"/>
+  <line x1="109" y1="59" x2="144" y2="17" stroke="#1A1B1F" stroke-width="2.5" stroke-linecap="square"/>
+  <!-- Square antenna tips (filled dark blocks) -->
+  <rect x="50" y="12" width="11" height="7" fill="#1A1B1F"/>
+  <rect x="139" y="12" width="11" height="7" fill="#1A1B1F"/>
+
+  <!-- SHORT ANTENNULES (straight) -->
+  <line x1="95" y1="61" x2="82" y2="46" stroke="#1A1B1F" stroke-width="1.6"/>
+  <line x1="95" y1="61" x2="78" y2="53" stroke="#1A1B1F" stroke-width="1.6"/>
+  <line x1="105" y1="61" x2="118" y2="46" stroke="#1A1B1F" stroke-width="1.6"/>
+  <line x1="105" y1="61" x2="122" y2="53" stroke="#1A1B1F" stroke-width="1.6"/>
+
+  <!-- EYE STALKS (straight, thick) -->
+  <line x1="84" y1="64" x2="76" y2="53" stroke="#1A1B1F" stroke-width="2.5"/>
+  <line x1="116" y1="64" x2="124" y2="53" stroke="#1A1B1F" stroke-width="2.5"/>
+
+  <!-- SQUARE EYES (squinting / narrowed) -->
+  <rect x="67" y="45" width="16" height="13" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.5"/>
+  <rect x="117" y="45" width="16" height="13" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.5"/>
+  <!-- Dark iris (square) -->
+  <rect x="70" y="48" width="10" height="7" fill="#1A1B1F"/>
+  <rect x="120" y="48" width="10" height="7" fill="#1A1B1F"/>
+  <!-- White highlight dot -->
+  <circle cx="72" cy="49" r="1.5" fill="white"/>
+  <circle cx="122" cy="49" r="1.5" fill="white"/>
+
+  <!-- STERN BROW LINES (heavy, angled inward) -->
+  <line x1="66" y1="42" x2="84" y2="47" stroke="#1A1B1F" stroke-width="4" stroke-linecap="square"/>
+  <line x1="116" y1="47" x2="134" y2="42" stroke="#1A1B1F" stroke-width="4" stroke-linecap="square"/>
+
+  <!-- CARAPACE (hexagonal/angular — same lobster but geometric) -->
+  <path d="M66 60 L100 55 L134 60 L138 100 L132 139 L100 145 L68 139 L62 100Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.5" stroke-linejoin="miter"/>
+
+  <!-- STERN FLAT MOUTH -->
+  <line x1="86" y1="102" x2="114" y2="102" stroke="#1A1B1F" stroke-width="3" stroke-linecap="square"/>
+
+  <!-- BOLD CHEST MARK (X brand) -->
+  <line x1="89" y1="114" x2="111" y2="132" stroke="#1A1B1F" stroke-width="3" stroke-linecap="square"/>
+  <line x1="111" y1="114" x2="89" y2="132" stroke="#1A1B1F" stroke-width="3" stroke-linecap="square"/>
+  <rect x="87" y="112" width="26" height="22" stroke="#1A1B1F" stroke-width="2" fill="none"/>
+
+  <!-- LEFT ARM + ANGULAR CLAW -->
+  <path d="M62 104 L42 108 L42 120 L62 116Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.5" stroke-linejoin="miter"/>
+  <path d="M42 108 L20 100 L14 114 L20 122 L42 120Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.5" stroke-linejoin="miter"/>
+  <!-- Pincer slit -->
+  <line x1="34" y1="111" x2="42" y2="114" stroke="#1A1B1F" stroke-width="2.5"/>
+
+  <!-- RIGHT ARM + ANGULAR CLAW -->
+  <path d="M138 104 L158 108 L158 120 L138 116Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.5" stroke-linejoin="miter"/>
+  <path d="M158 108 L180 100 L186 114 L180 122 L158 120Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.5" stroke-linejoin="miter"/>
+  <!-- Pincer slit -->
+  <line x1="166" y1="111" x2="158" y2="114" stroke="#1A1B1F" stroke-width="2.5"/>
+
+  <!-- WALKING LEGS (straight/rigid) -->
+  <line x1="70" y1="118" x2="55" y2="140" stroke="#1A1B1F" stroke-width="2.2" stroke-linecap="square"/>
+  <line x1="73" y1="126" x2="58" y2="149" stroke="#1A1B1F" stroke-width="2.2" stroke-linecap="square"/>
+  <line x1="76" y1="133" x2="63" y2="157" stroke="#1A1B1F" stroke-width="2.2" stroke-linecap="square"/>
+  <line x1="79" y1="138" x2="70" y2="162" stroke="#1A1B1F" stroke-width="2.2" stroke-linecap="square"/>
+  <line x1="130" y1="118" x2="145" y2="140" stroke="#1A1B1F" stroke-width="2.2" stroke-linecap="square"/>
+  <line x1="127" y1="126" x2="142" y2="149" stroke="#1A1B1F" stroke-width="2.2" stroke-linecap="square"/>
+  <line x1="124" y1="133" x2="137" y2="157" stroke="#1A1B1F" stroke-width="2.2" stroke-linecap="square"/>
+  <line x1="121" y1="138" x2="130" y2="162" stroke="#1A1B1F" stroke-width="2.2" stroke-linecap="square"/>
+
+  <!-- ABDOMEN SEGMENTS (rectangular, angular) -->
+  <rect x="72" y="139" width="56" height="18" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.2" stroke-linejoin="miter"/>
+  <rect x="75" y="157" width="50" height="17" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2" stroke-linejoin="miter"/>
+  <rect x="79" y="174" width="42" height="16" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2" stroke-linejoin="miter"/>
+  <rect x="84" y="190" width="32" height="15" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8" stroke-linejoin="miter"/>
+
+  <!-- TELSON (angular straight blades) -->
+  <path d="M84 205 L66 246 L76 252 L88 244 L86 205Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8" stroke-linejoin="miter"/>
+  <path d="M88 205 L86 244 L94 250 L100 244 L96 205Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8" stroke-linejoin="miter"/>
+  <path d="M96 205 L100 244 L104 244 L100 205Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8" stroke-linejoin="miter"/>
+  <path d="M104 205 L100 244 L106 250 L114 244 L112 205Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8" stroke-linejoin="miter"/>
+  <path d="M112 205 L112 244 L124 252 L134 246 L116 205Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8" stroke-linejoin="miter"/>
+
+</svg>

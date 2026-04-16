@@ -1,0 +1,103 @@
+<svg viewBox="0 0 200 275" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- HEADPHONE BAND (over top of head/antennae area) -->
+  <path d="M66 87 Q100 56 134 87" stroke="#1A1B1F" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <!-- Left headphone cup (outer) -->
+  <circle cx="64" cy="90" r="13" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.5"/>
+  <!-- Left cup speaker grill -->
+  <circle cx="64" cy="90" r="7" stroke="#1A1B1F" stroke-width="1.5" fill="none"/>
+  <circle cx="64" cy="90" r="3" fill="#1A1B1F"/>
+  <!-- Right headphone cup -->
+  <circle cx="136" cy="90" r="13" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.5"/>
+  <circle cx="136" cy="90" r="7" stroke="#1A1B1F" stroke-width="1.5" fill="none"/>
+  <circle cx="136" cy="90" r="3" fill="#1A1B1F"/>
+
+  <!-- ANTENNAE (short, droopy) -->
+  <path d="M92 61 Q84 50 78 43" stroke="#1A1B1F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M108 61 Q116 50 122 43" stroke="#1A1B1F" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- SHORT ANTENNULES -->
+  <path d="M95 63 Q87 54 83 50" stroke="#1A1B1F" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <path d="M95 63 Q85 56 80 53" stroke="#1A1B1F" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <path d="M105 63 Q113 54 117 50" stroke="#1A1B1F" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <path d="M105 63 Q115 56 120 53" stroke="#1A1B1F" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+
+  <!-- EYE STALKS -->
+  <path d="M84 67 L77 56 L74 58 L81 69Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.2"/>
+  <path d="M116 67 L123 56 L126 58 L119 69Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.2"/>
+
+  <!-- HALF-CLOSED DROOPY EYES -->
+  <circle cx="75" cy="53" r="9" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2"/>
+  <circle cx="125" cy="53" r="9" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2"/>
+  <!-- Iris (lower position — relaxed gaze downward) -->
+  <circle cx="75" cy="57" r="5.5" fill="#1A1B1F"/>
+  <circle cx="125" cy="57" r="5.5" fill="#1A1B1F"/>
+  <!-- Pupil highlight -->
+  <circle cx="72" cy="54" r="2" fill="white"/>
+  <circle cx="122" cy="54" r="2" fill="white"/>
+  <!-- Heavy drooping eyelid (cuts across upper half of eye) -->
+  <path d="M66 53 Q75 46 84 53" stroke="#1A1B1F" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M116 53 Q125 46 134 53" stroke="#1A1B1F" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+  <!-- EYEBROWS — soft, barely there, relaxed -->
+  <path d="M69 44 Q75 42 81 44" stroke="#1A1B1F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M119 44 Q125 42 131 44" stroke="#1A1B1F" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- CARAPACE -->
+  <ellipse cx="100" cy="99" rx="36" ry="42" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.2"/>
+
+  <!-- CONTENT RELAXED SMILE -->
+  <path d="M89 106 Q100 114 111 106" stroke="#1A1B1F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- LEFT ARM + CLAW (hanging low, relaxed) -->
+  <path d="M64 112 Q50 118 38 124 Q50 136 64 130Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8"/>
+  <ellipse cx="24" cy="128" rx="15" ry="12" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2" transform="rotate(5 24 128)"/>
+  <path d="M32 122 Q38 128 32 134" stroke="#1A1B1F" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- RIGHT ARM + CLAW (hanging low) -->
+  <path d="M136 112 Q150 118 162 124 Q150 136 136 130Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8"/>
+  <ellipse cx="176" cy="128" rx="15" ry="12" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2" transform="rotate(-5 176 128)"/>
+  <path d="M168 122 Q162 128 168 134" stroke="#1A1B1F" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- WALKING LEGS -->
+  <path d="M72 120 Q61 133 57 145" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M75 128 Q64 141 61 155" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M78 135 Q69 148 67 161" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M81 140 Q75 153 74 165" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M128 120 Q139 133 143 145" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M125 128 Q136 141 139 155" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M122 135 Q131 148 133 161" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M119 140 Q125 153 126 165" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+  <!-- ABDOMEN SEGMENTS -->
+  <path d="M74 141 Q100 134 126 141 Q128 152 126 159 Q100 166 74 159 Q72 152 74 141Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8"/>
+  <path d="M77 159 Q100 166 123 159 Q121 171 118 177 Q100 184 82 177 Q79 171 77 159Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.6"/>
+  <path d="M82 177 Q100 184 118 177 Q116 187 112 193 Q100 198 88 193 Q84 187 82 177Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+  <path d="M88 193 Q100 198 112 193 Q110 203 106 208 Q100 212 94 208 Q90 203 88 193Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.4"/>
+
+  <!-- TELSON FAN -->
+  <path d="M84 210 Q68 228 71 246 Q79 252 87 246 Q83 228 90 212Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+  <path d="M90 212 Q80 232 83 252 Q91 258 97 252 Q97 230 100 215Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+  <path d="M100 215 Q100 234 100 254 Q106 258 110 252 Q110 230 100 215Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+  <path d="M100 215 Q103 230 117 252 Q123 258 129 250 Q121 230 110 212Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+  <path d="M110 212 Q117 228 129 246 Q129 254 116 250 Q113 230 116 210Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+
+  <!-- MUSIC NOTES (floating, relaxed vibe) -->
+  <!-- Left note group -->
+  <path d="M32 108 L32 122 M32 108 L42 104 L42 118" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <ellipse cx="30" cy="123" rx="5" ry="4" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5" transform="rotate(-15 30 123)"/>
+  <ellipse cx="40" cy="119" rx="5" ry="4" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5" transform="rotate(-15 40 119)"/>
+  <!-- Right note -->
+  <path d="M162 104 L162 118" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <ellipse cx="160" cy="119" rx="5" ry="4" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5" transform="rotate(-15 160 119)"/>
+
+</svg>

@@ -1,0 +1,101 @@
+<svg viewBox="0 0 200 275" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- HALO (dashed, above head) -->
+  <ellipse cx="100" cy="44" rx="28" ry="9" stroke="#1A1B1F" stroke-width="1.5" stroke-dasharray="5 3" fill="none"/>
+  <!-- Halo glow dots -->
+  <circle cx="72" cy="42" r="1.8" fill="#1A1B1F"/>
+  <circle cx="128" cy="42" r="1.8" fill="#1A1B1F"/>
+  <circle cx="78" cy="34" r="1.2" fill="#1A1B1F"/>
+  <circle cx="122" cy="34" r="1.2" fill="#1A1B1F"/>
+
+  <!-- ANTENNAE (relaxed gentle curves) -->
+  <path d="M91 59 Q78 44 66 28" stroke="#1A1B1F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M109 59 Q122 44 134 28" stroke="#1A1B1F" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- SHORT ANTENNULES -->
+  <path d="M95 61 Q86 51 82 45" stroke="#1A1B1F" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <path d="M95 61 Q83 53 78 50" stroke="#1A1B1F" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <path d="M105 61 Q114 51 118 45" stroke="#1A1B1F" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <path d="M105 61 Q117 53 122 50" stroke="#1A1B1F" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+
+  <!-- EYE STALKS -->
+  <path d="M84 65 L77 54 L74 56 L81 67Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.2"/>
+  <path d="M116 65 L123 54 L126 56 L119 67Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.2"/>
+
+  <!-- EYE BULBS (peaceful — half closed) -->
+  <circle cx="75" cy="51" r="9" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2"/>
+  <circle cx="125" cy="51" r="9" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2"/>
+  <!-- Iris (slightly downward gaze) -->
+  <circle cx="75" cy="55" r="5.5" fill="#1A1B1F"/>
+  <circle cx="125" cy="55" r="5.5" fill="#1A1B1F"/>
+  <!-- Pupil highlight -->
+  <circle cx="72" cy="52" r="2" fill="white"/>
+  <circle cx="122" cy="52" r="2" fill="white"/>
+  <!-- Heavy eyelid (half-closed) -->
+  <path d="M66 52 Q75 47 84 52" stroke="#1A1B1F" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M116 52 Q125 47 134 52" stroke="#1A1B1F" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- EYEBROWS — gently raised, serene -->
+  <path d="M68 42 Q75 39 82 43" stroke="#1A1B1F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M118 43 Q125 39 132 42" stroke="#1A1B1F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- CARAPACE -->
+  <ellipse cx="100" cy="97" rx="36" ry="42" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2.2"/>
+
+  <!-- THIRD EYE (filled dark circle) -->
+  <circle cx="100" cy="73" r="4.5" fill="#1A1B1F"/>
+  <circle cx="100" cy="73" r="2" fill="#CAFF15"/>
+
+  <!-- SERENE GENTLE SMILE -->
+  <path d="M88 102 Q100 112 112 102" stroke="#1A1B1F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- LEFT ARM raised upward (mudra) -->
+  <path d="M64 100 Q50 86 40 76" stroke="#1A1B1F" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M64 100 Q52 88 58 76 L64 100Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8"/>
+  <!-- Left claw raised/open -->
+  <ellipse cx="32" cy="70" rx="14" ry="12" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2" transform="rotate(-30 32 70)"/>
+  <path d="M30 62 Q26 70 30 78" stroke="#1A1B1F" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- RIGHT ARM raised upward -->
+  <path d="M136 100 Q150 86 160 76 L154 76 Q148 88 136 100Z" fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8"/>
+  <!-- Right claw raised/open -->
+  <ellipse cx="168" cy="70" rx="14" ry="12" fill="#CAFF15" stroke="#1A1B1F" stroke-width="2" transform="rotate(30 168 70)"/>
+  <path d="M170 62 Q174 70 170 78" stroke="#1A1B1F" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- WALKING LEGS -->
+  <path d="M72 118 Q61 131 57 143" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M75 126 Q64 139 61 153" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M78 133 Q69 146 67 159" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M81 138 Q75 151 74 163" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M128 118 Q139 131 143 143" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M125 126 Q136 139 139 153" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M122 133 Q131 146 133 159" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M119 138 Q125 151 126 163" stroke="#1A1B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+  <!-- ABDOMEN SEGMENTS -->
+  <path d="M74 139 Q100 132 126 139 Q128 150 126 157 Q100 164 74 157 Q72 150 74 139Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.8"/>
+  <path d="M77 157 Q100 164 123 157 Q121 169 118 175 Q100 182 82 175 Q79 169 77 157Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.6"/>
+  <path d="M82 175 Q100 182 118 175 Q116 185 112 191 Q100 196 88 191 Q84 185 82 175Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+  <path d="M88 191 Q100 196 112 191 Q110 201 106 206 Q100 210 94 206 Q90 201 88 191Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.4"/>
+
+  <!-- TELSON FAN -->
+  <path d="M84 208 Q68 226 71 244 Q79 250 87 244 Q83 226 90 210Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+  <path d="M90 210 Q80 230 83 250 Q91 256 97 250 Q97 228 100 213Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+  <path d="M100 213 Q100 232 100 252 Q106 256 110 250 Q110 228 100 213Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+  <path d="M100 213 Q103 228 117 250 Q123 256 129 248 Q121 228 110 210Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+  <path d="M110 210 Q117 226 129 244 Q129 252 116 248 Q113 228 116 208Z"
+        fill="#CAFF15" stroke="#1A1B1F" stroke-width="1.5"/>
+
+  <!-- SPARKLE marks around body -->
+  <path d="M54 148 L56 144 L58 148 L56 152Z" fill="#1A1B1F"/>
+  <path d="M144 144 L146 140 L148 144 L146 148Z" fill="#1A1B1F"/>
+
+</svg>

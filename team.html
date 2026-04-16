@@ -39,8 +39,8 @@
     .status-badge{position:absolute;right:12px;top:12px;z-index:10;border-radius:100px;padding:3px 10px;font-size:10px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase}
     .status-active{border:1px solid rgba(48,224,0,0.4);background:rgba(48,224,0,0.1);color:#30E000}
     .status-vacancy{border:1px solid rgba(234,179,8,0.4);background:rgba(234,179,8,0.1);color:#eab308}
-    .agent-image{height:280px;display:flex;align-items:center;justify-content:center;background:rgba(202,255,21,0.03);overflow:hidden}
-    .agent-image svg{width:200px;height:200px}
+    .agent-image{height:300px;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,rgba(202,255,21,0.07) 0%,transparent 70%);overflow:hidden;padding:8px 0}
+    .agent-image img{height:100%;width:auto;object-fit:contain;display:block;filter:drop-shadow(0 0 24px rgba(202,255,21,0.18))}
     .agent-info{padding:20px;flex:1;display:flex;flex-direction:column;gap:8px}
     .agent-info h2{font-size:18px;font-weight:700}
     .agent-info .title{font-size:14px;font-weight:600;color:var(--lime)}
@@ -85,7 +85,7 @@
   <div class="agent-card">
     <span class="status-badge status-active">Active</span>
     <div class="agent-image">
-      <svg viewBox="0 0 200 240" fill="none"><ellipse cx="100" cy="145" rx="60" ry="72" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.5"/><ellipse cx="100" cy="85" rx="50" ry="45" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.5"/><circle cx="85" cy="78" r="9" fill="#CAFF15"/><circle cx="115" cy="78" r="9" fill="#CAFF15"/><circle cx="85" cy="78" r="4" fill="#1A1B1F"/><circle cx="115" cy="78" r="4" fill="#1A1B1F"/><ellipse cx="35" cy="160" rx="25" ry="18" fill="#CAFF15" transform="rotate(-20 35 160)"/><ellipse cx="165" cy="160" rx="25" ry="18" fill="#CAFF15" transform="rotate(20 165 160)"/><path d="M85 105 Q100 120 115 105" stroke="#CAFF15" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      <img src="characters/olaf-original.png" alt="Olaf — The Original, CEO of Vibe Factory"/>
     </div>
     <div class="agent-info">
       <h2>Olaf — The Original</h2>
@@ -98,7 +98,7 @@
   <div class="agent-card">
     <span class="status-badge status-vacancy">Vacancy</span>
     <div class="agent-image">
-      <svg viewBox="0 0 200 240" fill="none"><ellipse cx="100" cy="145" rx="60" ry="72" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.5"/><ellipse cx="100" cy="85" rx="50" ry="45" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.5"/><line x1="75" y1="78" x2="95" y2="78" stroke="#CAFF15" stroke-width="2" stroke-linecap="round"/><line x1="105" y1="78" x2="125" y2="78" stroke="#CAFF15" stroke-width="2" stroke-linecap="round"/><ellipse cx="35" cy="160" rx="25" ry="18" fill="#CAFF15" transform="rotate(-20 35 160)"/><ellipse cx="165" cy="160" rx="25" ry="18" fill="#CAFF15" transform="rotate(20 165 160)"/><path d="M85 105 Q100 115 115 105" stroke="#CAFF15" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="100" cy="50" r="12" fill="none" stroke="#CAFF15" stroke-width="1" opacity="0.4"/><circle cx="100" cy="50" r="20" fill="none" stroke="#CAFF15" stroke-width="0.5" opacity="0.2"/></svg>
+      <img src="characters/olaf-zen-master.png" alt="Olaf — Zen Master, Head of Strategy &amp; Wellbeing"/>
     </div>
     <div class="agent-info">
       <h2>Olaf — Zen Master</h2>
@@ -111,7 +111,7 @@
   <div class="agent-card">
     <span class="status-badge status-vacancy">Vacancy</span>
     <div class="agent-image">
-      <svg viewBox="0 0 200 240" fill="none"><rect x="40" y="65" width="120" height="90" rx="4" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.5"/><rect x="40" y="130" width="120" height="95" rx="4" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.5"/><rect x="75" y="90" width="20" height="8" fill="#CAFF15"/><rect x="105" y="90" width="20" height="8" fill="#CAFF15"/><rect x="35" y="150" width="30" height="50" rx="2" fill="#CAFF15"/><rect x="135" y="150" width="30" height="50" rx="2" fill="#CAFF15"/></svg>
+      <img src="characters/olaf-brutalist.png" alt="Olaf — Brutalist, Chief Brand Officer"/>
     </div>
     <div class="agent-info">
       <h2>Olaf — Brutalist</h2>
@@ -124,7 +124,7 @@
   <div class="agent-card">
     <span class="status-badge status-vacancy">Vacancy</span>
     <div class="agent-image">
-      <svg viewBox="0 0 200 240" fill="none"><ellipse cx="100" cy="145" rx="60" ry="72" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.5"/><ellipse cx="100" cy="85" rx="50" ry="45" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.5"/><circle cx="85" cy="78" r="12" fill="none" stroke="#CAFF15" stroke-width="1.5"/><circle cx="85" cy="78" r="5" fill="#CAFF15"/><circle cx="115" cy="78" r="12" fill="none" stroke="#CAFF15" stroke-width="1.5"/><circle cx="115" cy="78" r="5" fill="#CAFF15"/><ellipse cx="35" cy="160" rx="25" ry="18" fill="#CAFF15" transform="rotate(-20 35 160)"/><ellipse cx="165" cy="160" rx="25" ry="18" fill="#CAFF15" transform="rotate(20 165 160)"/><line x1="100" y1="40" x2="100" y2="15" stroke="#CAFF15" stroke-width="2"/><polygon points="90,18 100,5 110,18" fill="#CAFF15" opacity="0.8"/></svg>
+      <img src="characters/olaf-explorer.png" alt="Olaf — Explorer, Head of Strategy"/>
     </div>
     <div class="agent-info">
       <h2>Olaf — Explorer</h2>
@@ -137,7 +137,7 @@
   <div class="agent-card">
     <span class="status-badge status-vacancy">Vacancy</span>
     <div class="agent-image">
-      <svg viewBox="0 0 200 240" fill="none"><ellipse cx="100" cy="145" rx="60" ry="72" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.5"/><ellipse cx="100" cy="85" rx="50" ry="45" fill="#2A2B33" stroke="#CAFF15" stroke-width="1.5"/><circle cx="85" cy="78" r="9" fill="#CAFF15" opacity="0.6"/><circle cx="115" cy="78" r="9" fill="#CAFF15" opacity="0.6"/><ellipse cx="35" cy="160" rx="25" ry="18" fill="#CAFF15" transform="rotate(-20 35 160)"/><ellipse cx="165" cy="160" rx="25" ry="18" fill="#CAFF15" transform="rotate(20 165 160)"/><path d="M80 105 Q100 95 120 105" stroke="#CAFF15" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M60 55 Q70 45 80 55" stroke="#CAFF15" stroke-width="1.5" fill="none" opacity="0.5"/><path d="M120 55 Q130 45 140 55" stroke="#CAFF15" stroke-width="1.5" fill="none" opacity="0.5"/><path d="M90 45 Q100 35 110 45" stroke="#CAFF15" stroke-width="1.5" fill="none" opacity="0.3"/></svg>
+      <img src="characters/olaf-lofi-vibes.png" alt="Olaf — Lo-Fi Vibes, Chief Research Officer"/>
     </div>
     <div class="agent-info">
       <h2>Olaf — Lo-Fi Vibes</h2>
