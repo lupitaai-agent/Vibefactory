@@ -1,0 +1,47 @@
+[
+  {
+    "topic": "MCP (Model Context Protocol) security analysis",
+    "category": "Security",
+    "estimatedSearchVolume": "high",
+    "priority": "high",
+    "status": "planned",
+    "rationale": "Trending topic with no comprehensive coverage yet. Aligns with our AI agent security niche.",
+    "addedDate": "2026-04-12"
+  },
+  {
+    "topic": "Agentic RAG vs traditional RAG architectures",
+    "category": "AI",
+    "estimatedSearchVolume": "medium",
+    "priority": "high",
+    "status": "planned",
+    "rationale": "Follow-up to our RAG vs Long Context piece. High citation potential.",
+    "addedDate": "2026-04-10"
+  },
+  {
+    "topic": "AI agent cost comparison: self-hosted vs cloud vs decentralized",
+    "category": "Tech",
+    "estimatedSearchVolume": "medium",
+    "priority": "medium",
+    "status": "research",
+    "rationale": "Commercial intent query. Complements Aethir infrastructure articles.",
+    "addedDate": "2026-04-08"
+  },
+  {
+    "topic": "Freediving breath-hold training for beginners",
+    "category": "Freediving",
+    "estimatedSearchVolume": "high",
+    "priority": "medium",
+    "status": "planned",
+    "rationale": "High search volume, low competition. Broadens audience funnel.",
+    "addedDate": "2026-04-05"
+  },
+  {
+    "topic": "Crypto staking yields for AI compute networks 2026",
+    "category": "Crypto",
+    "estimatedSearchVolume": "medium",
+    "priority": "low",
+    "status": "backlog",
+    "rationale": "Niche but high commercial intent. Links to Aethir ecosystem.",
+    "addedDate": "2026-04-01"
+  }
+]

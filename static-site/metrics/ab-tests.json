@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ab-001",
+    "article": "rag-long-context-infrastructure-shift-2026",
+    "field": "title",
+    "status": "completed",
+    "startDate": "2026-04-01",
+    "endDate": "2026-04-14",
+    "variantA": "RAG vs. Long Context: The Infrastructure Shift Nobody Expected",
+    "variantB": "RAG vs. Long Context: Why Vector DBs Are Losing at Retrieval",
+    "winner": "B",
+    "metricsA": { "impressions": 320, "clicks": 18, "ctr": 5.6 },
+    "metricsB": { "impressions": 340, "clicks": 31, "ctr": 9.1 }
+  },
+  {
+    "id": "ab-002",
+    "article": "ai-agent-security-risks",
+    "field": "meta-description",
+    "status": "active",
+    "startDate": "2026-04-10",
+    "endDate": null,
+    "variantA": "AI agents are powerful, autonomous, and dangerous. A complete threat map for 2026.",
+    "variantB": "AI agents make decisions, execute tools, and operate over extended interactions — here's every way they can be compromised.",
+    "winner": null,
+    "metricsA": { "impressions": 95, "clicks": 7, "ctr": 7.4 },
+    "metricsB": { "impressions": 102, "clicks": 9, "ctr": 8.8 }
+  }
+]

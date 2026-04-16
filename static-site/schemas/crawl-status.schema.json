@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://vibefactory.io/schemas/crawl-status.schema.json",
+  "title": "Vibefactory Crawl Status",
+  "type": "object",
+  "required": ["lastChecked", "robotsTxt", "sitemapXml", "llmsTxt", "llmsFullTxt", "feedXml", "pages"],
+  "properties": {
+    "lastChecked": { "type": "string", "format": "date" },
+    "robotsTxt": {
+      "type": "object",
+      "required": ["valid", "allowsGPTBot", "allowsPerplexityBot", "allowsClaudeBot", "allowsGooglebot", "allowsBingbot", "lastModified"],
+      "properties": {
+        "valid": { "type": "boolean" },
+        "allowsGPTBot": { "type": "boolean" },
+        "allowsPerplexityBot": { "type": "boolean" },
+        "allowsClaudeBot": { "type": "boolean" },
+        "allowsGooglebot": { "type": "boolean" },
+        "allowsBingbot": { "type": "boolean" },
+        "lastModified": { "type": "string", "format": "date" }
+      }
+    },
+    "sitemapXml": {
+      "type": "object",
+      "required": ["valid", "totalUrls", "lastSubmitted", "googleFetchStatus", "bingFetchStatus"],
+      "properties": {
+        "valid": { "type": "boolean" },
+        "totalUrls": { "type": "integer" },
+        "lastSubmitted": { "type": "string", "format": "date" },
+        "googleFetchStatus": { "type": "string", "enum": ["ok", "pending", "error", "not-submitted"] },
+        "bingFetchStatus": { "type": "string", "enum": ["ok", "pending", "error", "not-submitted"] }
+      }
+    },
+    "llmsTxt": {
+      "type": "object",
+      "required": ["exists", "sizeBytes", "crawlsThisWeek", "lastCrawledBy"]
+    },
+    "llmsFullTxt": {
+      "type": "object",
+      "required": ["exists", "sizeBytes", "crawlsThisWeek", "lastCrawledBy"]
+    },
+    "feedXml": {
+      "type": "object",
+      "required": ["valid", "itemCount", "lastBuildDate"]
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url", "googleIndexed", "bingIndexed", "lastCrawled"],
+        "properties": {
+          "url": { "type": "string" },
+          "googleIndexed": { "type": "boolean" },
+          "bingIndexed": { "type": "boolean" },
+          "lastCrawled": { "type": "string", "format": "date" }
+        }
+      }
+    }
+  }
+}
