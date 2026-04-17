@@ -118,8 +118,23 @@
     .footer-links{display:flex;gap:16px;font-size:12px}
     .footer-links a{transition:color 0.2s}
     .footer-links a:hover{color:var(--white)}
-    @media(max-width:1024px){.hero{grid-template-columns:1fr;padding:60px 40px;gap:40px;min-height:auto}.hero-right{order:-1}.steps-grid{grid-template-columns:repeat(2,1fr)}.agaas{grid-template-columns:1fr;padding:60px 40px}}
-    @media(max-width:768px){nav{padding:0 20px}.hero{padding:40px 20px}.summary{padding:0 20px}.how{padding:40px 20px}.categories{padding:40px 20px}.agaas{padding:40px 20px;gap:40px}.aethir-banner{padding:60px 20px}footer{padding:32px 20px}.steps-grid{grid-template-columns:1fr}.summary-stats{grid-template-columns:1fr}}
+    .infra{padding:80px;max-width:1280px;margin:0 auto}
+    .infra-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px}
+    .infra-card{border:1px solid var(--border);background:var(--card);border-radius:12px;padding:32px}
+    .infra-card h3{font-size:16px;font-weight:700;margin-bottom:4px}
+    .infra-card>p{font-size:13px;color:var(--white60);margin-bottom:24px}
+    .skill-tag{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--lime-glow);background:var(--lime-dim);border-radius:100px;padding:3px 10px;font-size:11px;font-weight:600;color:var(--lime)}
+    .skill-tag.essential::after{content:' ★';color:var(--lime);font-size:9px}
+    .tier-block{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--border)}
+    .tier-block:last-child{border-bottom:none}
+    .tier-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+    .tier-hot{background:#FF6B6B}.tier-warm{background:#CAFF15}.tier-cold{background:#4A90D9}
+    .tier-name{font-size:13px;font-weight:700;width:60px}
+    .tier-desc{font-size:12px;color:var(--white60);line-height:1.5}
+    .infra-footer{font-size:11px;color:var(--white30);margin-top:20px;text-align:center}
+    .infra-footer a{color:var(--lime)}
+    @media(max-width:1024px){.hero{grid-template-columns:1fr;padding:60px 40px;gap:40px;min-height:auto}.hero-right{order:-1}.steps-grid{grid-template-columns:repeat(2,1fr)}.agaas{grid-template-columns:1fr;padding:60px 40px}.infra-grid{grid-template-columns:1fr}}
+    @media(max-width:768px){nav{padding:0 20px}.hero{padding:40px 20px}.summary{padding:0 20px}.how{padding:40px 20px}.infra{padding:40px 20px}.categories{padding:40px 20px}.agaas{padding:40px 20px;gap:40px}.aethir-banner{padding:60px 20px}footer{padding:32px 20px}.steps-grid{grid-template-columns:1fr}.summary-stats{grid-template-columns:1fr}}
     @media(max-width:640px){.nav-links{display:none}}
   </style>
 </head>
@@ -180,6 +195,68 @@
     <div class="step"><span class="step-num">02</span><span class="step-icon">✍️</span><h3>Writes Research</h3><p>Full research pieces — structured, sourced, readable. Original synthesis with clear takeaways, written to inform and built to rank.</p><span class="step-tag">Automated Writing</span></div>
     <div class="step"><span class="step-num">03</span><span class="step-icon">📡</span><h3>Publishes & Promotes</h3><p>Olaf updates the site directly, then formats and queues social posts for X and LinkedIn. The full distribution pipeline runs automatically.</p><span class="step-tag">Auto Publishing</span></div>
     <div class="step"><span class="step-num">04</span><span class="step-icon">🧠</span><h3>SEO · AEO · GEO</h3><p>Optimised for traditional search, AI answer engines like Perplexity and ChatGPT, and generative discovery. All three layers, built in.</p><span class="step-tag">Tri-Layer Optimisation</span></div>
+  </div>
+</section>
+<section class="infra" id="infrastructure">
+  <p class="section-label">🧠 Agentic Infrastructure</p>
+  <h2 style="font-size:clamp(28px,3.5vw,42px);font-weight:800;letter-spacing:-1px;margin-bottom:12px">What powers Olaf</h2>
+  <p style="font-size:15px;color:var(--white60);max-width:560px;line-height:1.7;margin-bottom:0">28 specialized skills and a three-tier memory architecture — the system that lets Olaf operate end-to-end without a human in the loop.</p>
+  <div class="infra-grid">
+    <div class="infra-card">
+      <h3>28 Specialized Skills</h3>
+      <p>Skills in four domains — each loaded on demand from the vault</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span class="skill-tag essential">content-writer</span>
+        <span class="skill-tag essential">seo-content-writer</span>
+        <span class="skill-tag essential">content-quality-auditor</span>
+        <span class="skill-tag essential">content-gap-analysis</span>
+        <span class="skill-tag">keyword-research</span>
+        <span class="skill-tag">serp-analysis</span>
+        <span class="skill-tag">rank-tracker</span>
+        <span class="skill-tag">backlink-analyzer</span>
+        <span class="skill-tag">domain-authority-auditor</span>
+        <span class="skill-tag">technical-seo-checker</span>
+        <span class="skill-tag">on-page-seo-auditor</span>
+        <span class="skill-tag">meta-tags-optimizer</span>
+        <span class="skill-tag">schema-markup-generator</span>
+        <span class="skill-tag">geo-content-optimizer</span>
+        <span class="skill-tag">entity-optimizer</span>
+        <span class="skill-tag">internal-linking-optimizer</span>
+        <span class="skill-tag">competitor-analysis</span>
+        <span class="skill-tag">marketing-analytics</span>
+        <span class="skill-tag">ab-test-setup</span>
+        <span class="skill-tag">performance-reporter</span>
+        <span class="skill-tag">copywriting</span>
+        <span class="skill-tag">product-marketing-context</span>
+        <span class="skill-tag">alert-manager</span>
+        <span class="skill-tag essential">memory-management</span>
+        <span class="skill-tag">content-refresher</span>
+        <span class="skill-tag">email-sequence</span>
+        <span class="skill-tag">find-skills</span>
+        <span class="skill-tag">page-audit</span>
+      </div>
+      <p style="font-size:11px;color:var(--white30);margin-top:12px">★ = mandatory before publishing</p>
+    </div>
+    <div class="infra-card">
+      <h3>3-Tier Memory Architecture</h3>
+      <p>Based on Sebastian Galimberti's agentic memory model — what lets Olaf learn and persist</p>
+      <div class="tier-block">
+        <div class="tier-dot tier-hot"></div>
+        <div class="tier-name">HOT</div>
+        <div class="tier-desc">hot-cache/ · Auto-loaded every session · Olaf's active context</div>
+      </div>
+      <div class="tier-block">
+        <div class="tier-dot tier-warm"></div>
+        <div class="tier-name">WARM</div>
+        <div class="tier-desc">decisions/ logs/ notes/ wiki/ · Structured knowledge written after every task</div>
+      </div>
+      <div class="tier-block">
+        <div class="tier-dot tier-cold"></div>
+        <div class="tier-name">COLD</div>
+        <div class="tier-desc">archive/ · Long-term retrieval · Past decisions and logs</div>
+      </div>
+      <p class="infra-footer">Inspired by <a href="https://substack.com/@sebastianogalimberti" target="_blank" rel="noopener">Sebastian Galimberti's memory vault model</a></p>
+    </div>
   </div>
 </section>
 <section class="categories" id="categories">
