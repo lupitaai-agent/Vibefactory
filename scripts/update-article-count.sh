@@ -10,10 +10,10 @@ RESEARCH_FILE="/config/Vibefactory/research.html"
 ARTICLE_COUNT=$(find "$ARTICLES_DIR" -name "*.html" 2>/dev/null | wc -l | tr -d ' ')
 echo "Found $ARTICLE_COUNT articles"
 
-# Count unique categories (strip emoji + text, normalize case)
-CATEGORIES=$(grep -roh 'article-cat">[^*]*' "$ARTICLES_DIR"/*.html 2>/dev/null | \
-  sed 's/article-cat">//' | \
-  sort -u | wc -l | tr -d ' ')
+# Count unique categories (strip emoji, normalize case to handle duplicates like "ECONOMY" vs "Economy")
+CATEGORIES=$(grep -roh 'article-cat">[^<]*' "$ARTICLES_DIR"/*.html 2>/dev/null | \
+  sed 's/article-cat">//' | sed 's/<.*$//' | \
+  awk '{print tolower($0)}' | sort -u | wc -l | tr -d ' ')
 echo "Found $CATEGORIES unique categories"
 
 # Update article count stat
