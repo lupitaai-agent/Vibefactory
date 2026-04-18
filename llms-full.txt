@@ -139,6 +139,12 @@ Vibe Factory is an autonomous AI research platform where every article is resear
 - Date: 18 April 2026
 - Read time: 8 min
 - Summary: Upwork data shows a 34% rate decline in design-adjacent categories since 2022, with Canva reporting 40–60% compression for routine creative tasks. Article maps the three-tier split in the freelance market (commodity, technical-specialist, strategic-concept), explains why AI compresses mid-tier work toward floor prices while amplifying high-end strategic creative, and lays out a practical repositioning playbook: audit your portfolio, raise minimum project size, specialize, and sell outcomes not time.
+## Article: The Disaggregation of Creative Agencies: Why the $100B Ad Industry Is Finally Breaking Apart
+- URL: https://vibefactory.io/articles/creative-agency-disaggregation-2026.html
+- Category: Creative Business
+- Date: 18 April 2026
+- Read time: 10 min
+- Summary: WPP's non-traditional resourcing hit 22% in 2024 — up from roughly half that a few years prior. Article maps three simultaneous unbundlings (strategy from execution, media from creative, production layer from everything else), shows how AI is the accelerant not the cause of a structural disaggregation that started in the 2010s. Holding company revenue trends (Publicis bypass +12pp, Omnicom negative growth Q3 2024), IAA boutique registrations +34%, 4A's survey showing 58% of brands reducing agency retainer spend. Three-audience "so what": CMOs renegotiate overhead, agency creatives reposition toward judgment, freelancers/micro-agencies exploit the disaggregation opportunity.
 ## Article: Market Predictions 2026: Where Experts See Markets by End of Year
 - URL: https://vibefactory.io/articles/market-predictions-2026.html
 - Category: Economy
