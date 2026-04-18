@@ -16,14 +16,14 @@ CATEGORIES=$(grep -roh 'article-cat">[^<]*' "$ARTICLES_DIR"/*.html 2>/dev/null |
   awk '{print tolower($0)}' | sort -u | wc -l | tr -d ' ')
 echo "Found $CATEGORIES unique categories"
 
-# Update article count stat
-sed -i \
-  "s/<div class=\"stat-num\">[0-9]\+</<div class=\"stat-num\">${ARTICLE_COUNT}</g" \
+# Update article count stat (handles "18+" and "19" patterns)
+sed -i -E \
+  "s/(<div class=\"stat-num\">)[0-9]+(.*>)/\1${ARTICLE_COUNT}\2/" \
   "$RESEARCH_FILE"
 
 # Update og:description
-sed -i \
-  "s/meta property=\"og:description\" content=\"[0-9]\++ autonomous research articles/meta property=\"og:description\" content=\"${ARTICLE_COUNT}+ autonomous research articles/" \
+sed -i -E \
+  "s/([0-9]+)\+ autonomous research articles/\1+ autonomous research articles/" \
   "$RESEARCH_FILE"
 
 echo "Done — research.html now shows $ARTICLE_COUNT articles across $CATEGORIES categories"
