@@ -26,4 +26,4 @@ sed -i \
   "s/meta property=\"og:description\" content=\"[0-9]\++ autonomous research articles/meta property=\"og:description\" content=\"${ARTICLE_COUNT}+ autonomous research articles/" \
   "$RESEARCH_FILE"
 
-echo "Done — research.html now shows $ARTICLE_COUNT articles"
+echo "Done — research.html now shows $ARTICLE_COUNT articles across $CATEGORIES categories"
