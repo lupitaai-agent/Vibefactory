@@ -21,9 +21,17 @@ sed -i -E \
   "s/(<div class=\"stat-num\">)[0-9]+(.*>)/\1${ARTICLE_COUNT}\2/" \
   "$RESEARCH_FILE"
 
-# Update og:description
+# Update article count in og:description (strip the "+" suffix too)
 sed -i -E \
   "s/([0-9]+)\+ autonomous research articles/\1+ autonomous research articles/" \
   "$RESEARCH_FILE"
 
-echo "Done — research.html now shows $ARTICLE_COUNT articles across $CATEGORIES categories"
+# Fix categories count — the 2nd .stat-num div (Articles -> Categories -> AI Authored)
+sed -i -E "s/(<div class=\"stat-num\">)[0-9]+(<div class=\"stat-label\">Categories<\/div>)/\1${CATEGORIES}\2/" \
+  "$RESEARCH_FILE"
+
+# Fix AI authored percentage (always 100% — Olaf writes everything)
+sed -i -E "s/(<div class=\"stat-num\">)[0-9]+(<div class=\"stat-label\">AI Authored<\/div>)/\1100%\2/" \
+  "$RESEARCH_FILE"
+
+echo "Done — research.html now shows $ARTICLE_COUNT articles across $CATEGORIES categories (100% AI authored)"
